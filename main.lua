@@ -1,13 +1,13 @@
 function initUi()
   -- mode shortcuts
-  app.registerUi({["menu"] = "Enter normal mode", ["callback"] = "a", ["accelerator"] = "a"}); -- = "Escape" did not work
+  app.registerUi({["menu"] = "Enter tool mode", ["callback"] = "t", ["accelerator"] = "t"}); -- = "Escape" did not work
   app.registerUi({["menu"] = "Enter color mode", ["callback"] = "c", ["accelerator"] = "c"});
-  -- normal mode
-  app.registerUi({["menu"] = "Cycle through line style (normal mode)", ["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
-  app.registerUi({["menu"] = "Select pen tool (normal mode)", ["callback"] = "w", ["accelerator"] = "w"}); -- w for write
-  app.registerUi({["menu"] = "Select eraser tool (normal mode)", ["callback"] = "e", ["accelerator"] = "e"}); -- e for erase
-  app.registerUi({["menu"] = "Select highlighter tool (normal mode)", ["callback"] = "f", ["accelerator"] = "f"}); -- f for fat
-  app.registerUi({["menu"] = "Select select tool (normal mode)", ["callback"] = "s", ["accelerator"] = "s"}); -- s for select
+  -- tool mode
+  app.registerUi({["menu"] = "Cycle through line style (tool mode)", ["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
+  app.registerUi({["menu"] = "Select pen tool (tool mode)", ["callback"] = "w", ["accelerator"] = "w"}); -- w for write
+  app.registerUi({["menu"] = "Select eraser tool (tool mode)", ["callback"] = "e", ["accelerator"] = "e"}); -- e for erase
+  app.registerUi({["menu"] = "Select highlighter tool (tool mode)", ["callback"] = "f", ["accelerator"] = "f"}); -- f for fat
+  app.registerUi({["menu"] = "Select select tool (tool mode)", ["callback"] = "s", ["accelerator"] = "s"}); -- s for select
   -- color mode
   app.registerUi({["menu"] = "black (color mode)", ["callback"] = "x", ["accelerator"] = "x"});   -- blaX
   app.registerUi({["menu"] = "white (color mode)", ["callback"] = "w", ["accelerator"] = "w"});   -- White
@@ -21,8 +21,8 @@ function initUi()
   app.registerUi({["menu"] = "purple (color mode)", ["callback"] = "p", ["accelerator"] = "p"});  -- Purple
 end
 
--- the modes are "normal" and "color"
-local currentMode = "normal"
+-- the modes are "tool" and "color"
+local currentMode = "tool"
 
 local linestyleList = {
   "PLAIN", 
@@ -44,9 +44,6 @@ local cyanColor = 0x44e8e1
 local blueColor = 0x7c80ec
 local purpleColor = 0xb57ed9
 
-function a()
-  currentMode = "normal"
-end
 
 function b()
   if currentMode == "color" then
@@ -55,7 +52,7 @@ function b()
 end
 
 function c()
-  if currentMode == "normal" then
+  if currentMode == "tool" then
     currentMode = "color"
   elseif currentMode == "color" then
     setColor(cyanColor)
@@ -63,13 +60,13 @@ function c()
 end
 
 function e()
-  if currentMode == "normal" then
+  if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_ERASER"})
   end
 end
 
 function f()
-  if currentMode == "normal" then
+  if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER"})
   end
 end
@@ -93,7 +90,7 @@ function p()
 end
 
 function q()
-  if currentMode == "normal" then
+  if currentMode == "tool" then
     currentLinestyle = currentLinestyle % #linestyleList + 1
     app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_" .. linestyleList[currentLinestyle]})
   elseif currentMode == "color" then
@@ -108,13 +105,17 @@ function r()
 end
 
 function s()
-  if currentMode == "normal" then
+  if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_SELECT_REGION"})
   end
 end
 
+function t()
+  currentMode = "tool"
+end
+
 function w()
-  if currentMode == "normal" then
+  if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_PEN"})
   elseif currentMode == "color" then
     setColor(whiteColor)
@@ -136,6 +137,6 @@ end
 
 function setColor(color)
   app.changeToolColor({["color"] = color, ["selection"] = true})
-  currentMode = "normal"
+  currentMode = "tool"
 end
 
