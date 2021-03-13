@@ -89,3 +89,6 @@ The keybindings for line style mode are
 2. `s`: Dashed
 3. `d`: Dotted
 4. `f`: Dash-dotted
+
+Selecting a line style
+automatically returns you to tool mode.

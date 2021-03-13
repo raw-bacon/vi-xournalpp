@@ -39,19 +39,21 @@ function initUi()
   app.registerUi({["menu"] = "Dash-dotted (line style mode)",  ["callback"] = "f", ["accelerator"] = "f"});
 end
 
--- the modes are "tool", "color", "linestyle", and "shape"
-local currentMode = "tool"
 
-local blackColor = 0x000000
-local whiteColor = 0xffffff
-local pinkColor = 0xf88fea 
-local redColor = 0xed6060
+-- change the hex values to customize colors
+local blackColor  = 0x000000
+local whiteColor  = 0xffffff
+local pinkColor   = 0xf88fea 
+local redColor    = 0xed6060
 local orangeColor = 0xec9435
 local yellowColor = 0xe9f23a
-local greenColor = 0x6ae170
-local cyanColor = 0x44e8e1
-local blueColor = 0x7c80ec
+local greenColor  = 0x6ae170
+local cyanColor   = 0x44e8e1
+local blueColor   = 0x7c80ec
 local purpleColor = 0xb57ed9
+
+-- the modes are "tool", "color", "linestyle", and "shape"
+local currentMode = "tool"
 
 function a()
   if currentMode == "tool" then
@@ -61,6 +63,7 @@ function a()
     currentMode = "tool"
   elseif currentMode == "linestyle" then
     app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_PLAIN"})
+    currentMode = "tool"
   end
 end
 
@@ -84,6 +87,7 @@ end
 function d()
   if currentMode == "linestyle" then
     app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DOT"})
+    currentMode = "tool"
   end
 end
 
@@ -101,6 +105,7 @@ function f()
     app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER"})
   elseif currentMode == "linestyle" then
     app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DASH_DOT"})
+    currentMode = "tool"
   end
 end
 
@@ -147,6 +152,7 @@ function s()
     currentMode = "tool"
   elseif currentMode == "linestyle" then
     app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DASH"})
+    currentMode = "tool"
   end
 end
 
@@ -157,6 +163,7 @@ end
 function w()
   if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_PEN"})
+    -- make sure ruler and arrow are deactivated
     app.uiAction({["action"] = "ACTION_RULER", ["enabled"] = false})
     app.uiAction({["action"] = "ACTION_TOOL_DRAW_ARROW", ["enabled"] = false})
   elseif currentMode == "color" then
