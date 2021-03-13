@@ -1,9 +1,6 @@
 # vi-xournalpp
-This is a tiny plugin for [Xournal++](https://github.com/xournalpp/xournalpp) 
-version >=1.1
-(which has yet to see a full release).
-If you want to use vi-xournalpp, install the unstable version
-of Xournal++.
+This is a tiny plugin for [Xournal++](https://github.com/xournalpp/xournalpp),
+unstable version (>=1.1).
 To set the plugin up on Linux, run
 
 ```
@@ -53,6 +50,10 @@ The keybindings for tool mode are
 3. `f`: Highlighter tool (f is for fat)
 4. `s`: Selection tool
 
+On version 1.0, the highlighter tool was `HILIGHTER` rather than
+`HIGHLIGHTER`. This should be a find and replace away from working
+on this version.
+
 ## Color mode
 The keybindings for color mode are
 
@@ -70,6 +71,10 @@ The keybindings for color mode are
 Selecting a color in color mode, 
 e.g. entering `cy` for selecting yellow,
 automatically returns you to tool mode.
+If you are running version 1.0,
+color mode will not work, and if you try
+to change color you will get a warning
+message.
 
 ## Shape mode
 The keybindings for shape mode are
