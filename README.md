@@ -1,10 +1,10 @@
 # vi-xournalpp
 This is a tiny plugin for [Xournal++](https://github.com/xournalpp/xournalpp) 
-for version >=1.1
+version >=1.1
 (which has yet to see a full release).
-If you want to use the vi-xournalpp, install the unstable version
+If you want to use vi-xournalpp, install the unstable version
 of Xournal++.
-To the plugin up on Linux, run
+To set the plugin up on Linux, run
 
 ```
 cd /usr/share/xournalpp/plugins
@@ -16,6 +16,8 @@ by the text editor vi.
 The two basic philosophies of choosing the keybindings are
 - They should be easy to remember mnemonically,
 - They should be accessible by the left hand on a QWERTY/QWERTZ/AZERTY keyboard.
+The second philosophy is broken for certain colors (e.g. `o`range),
+but who wants to draw an orange line anyway.
 
 # Thickness
 In any mode, thickness can be adjusted with numbers:
