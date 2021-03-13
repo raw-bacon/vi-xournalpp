@@ -36,11 +36,14 @@ The modes are
 1. `t`: Tool mode
 2. `c`: Color mode
 3. `a`: Shape mode
+4. `q`: Line style mode
 
 Tool mode is used for switching between the different tools and modes,
 color mode is used to switch between the different colors,
 and shape mode is used to select the different shapes (straight line,
 arrow, rectangle, and circle) for the pen tool.
+Line style mode allows for switching between plain, dotted and dashed
+line styles.
 
 ## Tool mode
 The keybindings for tool mode are
@@ -79,3 +82,10 @@ The keybindings for shape mode are
 Selecting a shape, e.g. entering `aa` for selecting
 the arrow shape, automatically returns you to tool mode.
 
+## Line style mode
+The keybindings for line style mode are
+
+1. `a`: Plain
+2. `s`: Dashed
+3. `d`: Dotted
+4. `f`: Dash-dotted

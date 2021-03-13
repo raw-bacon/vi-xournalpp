@@ -1,8 +1,9 @@
 function initUi()
   -- modes
-  app.registerUi({["menu"] = "Enter tool mode",  ["callback"] = "t", ["accelerator"] = "t"}); -- Tool. ["accelerator"] = "Escape" did not work
-  app.registerUi({["menu"] = "Enter color mode", ["callback"] = "c", ["accelerator"] = "c"}); -- Color
-  app.registerUi({["menu"] = "Enter shape mode", ["callback"] = "a", ["accelerator"] = "a"}); -- shApe
+  app.registerUi({["menu"] = "Enter tool mode",       ["callback"] = "t", ["accelerator"] = "t"}); -- Tool
+  app.registerUi({["menu"] = "Enter color mode",      ["callback"] = "c", ["accelerator"] = "c"}); -- Color
+  app.registerUi({["menu"] = "Enter shape mode",      ["callback"] = "a", ["accelerator"] = "a"}); -- shApe
+  app.registerUi({["menu"] = "Enter line style mode", ["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
   -- thickness
   app.registerUi({["menu"] = "Very fine",  ["callback"] = "one",   ["accelerator"] = "1"});
   app.registerUi({["menu"] = "Fine",       ["callback"] = "two",   ["accelerator"] = "2"});
@@ -10,7 +11,6 @@ function initUi()
   app.registerUi({["menu"] = "Thick",      ["callback"] = "four",  ["accelerator"] = "4"});
   app.registerUi({["menu"] = "Very thick", ["callback"] = "five",  ["accelerator"] = "5"});
   -- tool mode
-  app.registerUi({["menu"] = "Cycle through line style (tool mode)",["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
   app.registerUi({["menu"] = "Select pen tool (tool mode)",         ["callback"] = "w", ["accelerator"] = "w"}); -- w for write
   app.registerUi({["menu"] = "Select eraser tool (tool mode)",      ["callback"] = "e", ["accelerator"] = "e"}); -- e for erase
   app.registerUi({["menu"] = "Select highlighter tool (tool mode)", ["callback"] = "f", ["accelerator"] = "f"}); -- f for fat
@@ -32,19 +32,15 @@ function initUi()
   app.registerUi({["menu"] = "Rectangle (shape mode)",     ["callback"] = "r", ["accelerator"] = "r"});
   app.registerUi({["menu"] = "Ellipse (shape mode)",       ["callback"] = "e", ["accelerator"] = "e"});
   app.registerUi({["menu"] = "Bézier curve (shape mode)",  ["callback"] = "b", ["accelerator"] = "b"});
+  -- line style mode
+  app.registerUi({["menu"] = "Plain (line style mode)",        ["callback"] = "a", ["accelerator"] = "a"});
+  app.registerUi({["menu"] = "Dashed (line style mode)",       ["callback"] = "s", ["accelerator"] = "s"});
+  app.registerUi({["menu"] = "Dotted (line style mode)",       ["callback"] = "d", ["accelerator"] = "d"});
+  app.registerUi({["menu"] = "Dash-dotted (line style mode)",  ["callback"] = "f", ["accelerator"] = "f"});
 end
 
--- the modes are "tool" and "color"
+-- the modes are "tool", "color", "linestyle", and "shape"
 local currentMode = "tool"
-
-local linestyleList = {
-  "PLAIN", 
-  -- "DASH", 
-  -- "DASH_DOT", 
-  "DOT"
-}
-
-local currentLinestyle = 1
 
 local blackColor = 0x000000
 local whiteColor = 0xffffff
@@ -63,6 +59,8 @@ function a()
   elseif currentMode == "shape" then
     app.uiAction({["action"] = "ACTION_TOOL_DRAW_ARROW"})
     currentMode = "tool"
+  elseif currentMode == "linestyle" then
+    app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_PLAIN"})
   end
 end
 
@@ -83,6 +81,12 @@ function c()
   end
 end
 
+function d()
+  if currentMode == "linestyle" then
+    app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DOT"})
+  end
+end
+
 function e()
   if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_ERASER"})
@@ -95,6 +99,8 @@ end
 function f()
   if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER"})
+  elseif currentMode == "linestyle" then
+    app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DASH_DOT"})
   end
 end
 
@@ -118,8 +124,7 @@ end
 
 function q()
   if currentMode == "tool" then
-    currentLinestyle = currentLinestyle % #linestyleList + 1
-    app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_" .. linestyleList[currentLinestyle]})
+    currentMode = "linestyle"
   elseif currentMode == "color" then
     setColor(pinkColor)
   end
@@ -140,6 +145,8 @@ function s()
   elseif currentMode == "shape" then
     app.uiAction({["action"] = "ACTION_RULER"})
     currentMode = "tool"
+  elseif currentMode == "linestyle" then
+    app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DASH"})
   end
 end
 
