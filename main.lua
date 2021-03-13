@@ -2,6 +2,7 @@ function initUi()
   -- mode shortcuts
   app.registerUi({["menu"] = "Enter tool mode", ["callback"] = "t", ["accelerator"] = "t"}); -- = "Escape" did not work
   app.registerUi({["menu"] = "Enter color mode", ["callback"] = "c", ["accelerator"] = "c"});
+  app.registerUi({["menu"] = "Enter shape mode", ["callback"] = "a", ["accelerator"] = "a"});
   -- tool mode
   app.registerUi({["menu"] = "Cycle through line style (tool mode)", ["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
   app.registerUi({["menu"] = "Select pen tool (tool mode)", ["callback"] = "w", ["accelerator"] = "w"}); -- w for write
@@ -19,6 +20,12 @@ function initUi()
   app.registerUi({["menu"] = "cyan (color mode)", ["callback"] = "c", ["accelerator"] = "c"});    -- Cyan
   app.registerUi({["menu"] = "blue (color mode)", ["callback"] = "b", ["accelerator"] = "b"});    -- Blue
   app.registerUi({["menu"] = "purple (color mode)", ["callback"] = "p", ["accelerator"] = "p"});  -- Purple
+  -- shape mode
+  app.registerUi({["menu"] = "Straight line (shape mode)", ["callback"] = "s", ["accelerator"] = "s"});
+  app.registerUi({["menu"] = "Arrow (shape mode)", ["callback"] = "a", ["accelerator"] = "a"});
+  app.registerUi({["menu"] = "Rectangle (shape mode)", ["callback"] = "r", ["accelerator"] = "r"});
+  app.registerUi({["menu"] = "Ellipse (shape mode)", ["callback"] = "e", ["accelerator"] = "e"});
+  app.registerUi({["menu"] = "Bézier curve (shape mode)", ["callback"] = "b", ["accelerator"] = "b"});
 end
 
 -- the modes are "tool" and "color"
@@ -44,10 +51,21 @@ local cyanColor = 0x44e8e1
 local blueColor = 0x7c80ec
 local purpleColor = 0xb57ed9
 
+function a()
+  if currentMode == "tool" then
+    currentMode = "shape"
+  elseif currentMode == "shape" then
+    app.uiAction({["action"] = "ACTION_TOOL_DRAW_ARROW"})
+    currentMode = "tool"
+  end
+end
 
 function b()
   if currentMode == "color" then
     app.changeToolColor({["color"] = blueColor, ["selection"] = true})
+  elseif currentMode == "shape" then
+    app.uiAction({["action"] = "ACTION_TOOL_DRAW_SPLINE"})
+    currentMode = "tool"
   end
 end
 
@@ -62,6 +80,9 @@ end
 function e()
   if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_ERASER"})
+  elseif currentMode == "shape" then
+    app.uiAction({["action"] = "ACTION_TOOL_DRAW_ELLIPSE"})
+    currentMode = "tool"
   end
 end
 
@@ -101,12 +122,18 @@ end
 function r()
   if currentMode == "color" then
     setColor(redColor)
+  elseif currentMode == "shape" then
+    app.uiAction({["action"] = "ACTION_TOOL_DRAW_RECT"})
+    currentMode = "tool"
   end
 end
 
 function s()
   if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_SELECT_REGION"})
+  elseif currentMode == "shape" then
+    app.uiAction({["action"] = "ACTION_RULER"})
+    currentMode = "tool"
   end
 end
 
@@ -117,6 +144,8 @@ end
 function w()
   if currentMode == "tool" then
     app.uiAction({["action"] = "ACTION_TOOL_PEN"})
+    app.uiAction({["action"] = "ACTION_RULER", ["enabled"] = false})
+    app.uiAction({["action"] = "ACTION_TOOL_DRAW_ARROW", ["enabled"] = false})
   elseif currentMode == "color" then
     setColor(whiteColor)
   end

@@ -9,9 +9,12 @@ The modes are
 
 1. `t`: Tool mode
 2. `c`: Color mode
+3. `a`: Shape mode
 
-Tool mode is used for switching between the different tools,
-and color mode is used to switch between the different colors.
+Tool mode is used for switching between the different tools and modes,
+color mode is used to switch between the different colors,
+and shape mode is used to select the different shapes (straight line,
+arrow, rectangle, and circle) for the pen tool.
 
 # Tool mode
 The keybindings for tool mode are
@@ -38,4 +41,14 @@ The keybindings for color mode are
 Selecting a color in color mode, 
 e.g. entering `cy` for selecting yellow,
 automatically returns you to tool mode.
+
+# Shape mode
+The keybindings for shape mode are
+
+1. `s`: Straight line
+2. `a`: Arrow
+3. `r`: Rectangle
+4. `e`: Ellipse
+
+Selecting a shape returns you to tool mode.
 
