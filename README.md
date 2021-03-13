@@ -16,6 +16,15 @@ color mode is used to switch between the different colors,
 and shape mode is used to select the different shapes (straight line,
 arrow, rectangle, and circle) for the pen tool.
 
+# Thickness
+In any mode, thickness can be adjusted with numbers:
+
+1. `1`: Very fine
+2. `2`: Fine
+3. `3`: Medium
+4. `4`: Thick
+5. `5`: Very thick
+
 # Tool mode
 The keybindings for tool mode are
 

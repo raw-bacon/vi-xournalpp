@@ -3,6 +3,12 @@ function initUi()
   app.registerUi({["menu"] = "Enter tool mode",  ["callback"] = "t", ["accelerator"] = "t"}); -- Tool. ["accelerator"] = "Escape" did not work
   app.registerUi({["menu"] = "Enter color mode", ["callback"] = "c", ["accelerator"] = "c"}); -- Color
   app.registerUi({["menu"] = "Enter shape mode", ["callback"] = "a", ["accelerator"] = "a"}); -- shApe
+  -- thickness
+  app.registerUi({["menu"] = "Very fine",  ["callback"] = "one",   ["accelerator"] = "1"});
+  app.registerUi({["menu"] = "Fine",       ["callback"] = "two",   ["accelerator"] = "2"});
+  app.registerUi({["menu"] = "Medium",     ["callback"] = "three", ["accelerator"] = "3"});
+  app.registerUi({["menu"] = "Thick",      ["callback"] = "four",  ["accelerator"] = "4"});
+  app.registerUi({["menu"] = "Very thick", ["callback"] = "five",  ["accelerator"] = "5"});
   -- tool mode
   app.registerUi({["menu"] = "Cycle through line style (tool mode)",["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
   app.registerUi({["menu"] = "Select pen tool (tool mode)",         ["callback"] = "w", ["accelerator"] = "w"}); -- w for write
@@ -161,6 +167,27 @@ function y()
   if currentMode == "color" then
     setColor(yellowColor)
   end
+end
+
+
+function one()
+  app.uiAction({["action"] = "ACTION_SIZE_VERY_FINE"})
+end
+
+function two()
+  app.uiAction({["action"] = "ACTION_SIZE_FINE"})
+end
+
+function three()
+  app.uiAction({["action"] = "ACTION_SIZE_MEDIUM"})
+end
+
+function four()
+  app.uiAction({["action"] = "ACTION_SIZE_THICK"})
+end
+
+function five()
+  app.uiAction({["action"] = "ACTION_SIZE_VERY_THICK"})
 end
 
 
