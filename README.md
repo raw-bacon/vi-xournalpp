@@ -14,8 +14,10 @@ git clone https://github.com/raw-bacon/vi-xournalpp
 vi-xournalpp is inspired by the modal editing popularized
 by the text editor vi. 
 The two basic philosophies of choosing the keybindings are
+
 - They should be easy to remember mnemonically,
 - They should be accessible by the left hand on a QWERTY/QWERTZ/AZERTY keyboard.
+
 The second philosophy is broken for certain colors (e.g. `o`range),
 but who wants to draw an orange line anyway.
 
