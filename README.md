@@ -56,15 +56,15 @@ The keybindings for tool mode are
 ## Color mode
 The keybindings for color mode are
 
-1. `r`: Red
-2. `o`: Orange
-3. `y`: Yellow
-4. `g`: Green
-5. `c`: Cyan
-6. `b`: Blue
-7. `p`: Purple
-8. `q`: Pink
-9. `w`: White
+1.  `r`: Red
+2.  `o`: Orange
+3.  `y`: Yellow
+4.  `g`: Green
+5.  `c`: Cyan
+6.  `b`: Blue
+7.  `p`: Purple
+8.  `q`: Pink
+9.  `w`: White
 10. `x`: Black
 
 Selecting a color in color mode, 
@@ -78,6 +78,7 @@ The keybindings for shape mode are
 2. `a`: Arrow
 3. `r`: Rectangle
 4. `e`: Ellipse
+5. `b`: Spline (I think those are also called Bézier curves)
 
 Selecting a shape, e.g. entering `aa` for selecting
 the arrow shape, automatically returns you to tool mode.
