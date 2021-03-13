@@ -1,31 +1,31 @@
 function initUi()
-  -- mode shortcuts
-  app.registerUi({["menu"] = "Enter tool mode", ["callback"] = "t", ["accelerator"] = "t"}); -- = "Escape" did not work
-  app.registerUi({["menu"] = "Enter color mode", ["callback"] = "c", ["accelerator"] = "c"});
-  app.registerUi({["menu"] = "Enter shape mode", ["callback"] = "a", ["accelerator"] = "a"});
+  -- modes
+  app.registerUi({["menu"] = "Enter tool mode",  ["callback"] = "t", ["accelerator"] = "t"}); -- Tool. ["accelerator"] = "Escape" did not work
+  app.registerUi({["menu"] = "Enter color mode", ["callback"] = "c", ["accelerator"] = "c"}); -- Color
+  app.registerUi({["menu"] = "Enter shape mode", ["callback"] = "a", ["accelerator"] = "a"}); -- shApe
   -- tool mode
-  app.registerUi({["menu"] = "Cycle through line style (tool mode)", ["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
-  app.registerUi({["menu"] = "Select pen tool (tool mode)", ["callback"] = "w", ["accelerator"] = "w"}); -- w for write
-  app.registerUi({["menu"] = "Select eraser tool (tool mode)", ["callback"] = "e", ["accelerator"] = "e"}); -- e for erase
+  app.registerUi({["menu"] = "Cycle through line style (tool mode)",["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
+  app.registerUi({["menu"] = "Select pen tool (tool mode)",         ["callback"] = "w", ["accelerator"] = "w"}); -- w for write
+  app.registerUi({["menu"] = "Select eraser tool (tool mode)",      ["callback"] = "e", ["accelerator"] = "e"}); -- e for erase
   app.registerUi({["menu"] = "Select highlighter tool (tool mode)", ["callback"] = "f", ["accelerator"] = "f"}); -- f for fat
-  app.registerUi({["menu"] = "Select select tool (tool mode)", ["callback"] = "s", ["accelerator"] = "s"}); -- s for select
+  app.registerUi({["menu"] = "Select select tool (tool mode)",      ["callback"] = "s", ["accelerator"] = "s"}); -- s for select
   -- color mode
-  app.registerUi({["menu"] = "black (color mode)", ["callback"] = "x", ["accelerator"] = "x"});   -- blaX
-  app.registerUi({["menu"] = "white (color mode)", ["callback"] = "w", ["accelerator"] = "w"});   -- White
-  app.registerUi({["menu"] = "pink (color mode)", ["callback"] = "q", ["accelerator"] = "q"});    -- pinQ
-  app.registerUi({["menu"] = "red (color mode)", ["callback"] = "r", ["accelerator"] = "r"});     -- Red
-  app.registerUi({["menu"] = "orange (color mode)", ["callback"] = "o", ["accelerator"] = "o"});  -- Orange
-  app.registerUi({["menu"] = "yellow (color mode)", ["callback"] = "y", ["accelerator"] = "y"});  -- Yellow
-  app.registerUi({["menu"] = "green (color mode)", ["callback"] = "g", ["accelerator"] = "g"});   -- Green
-  app.registerUi({["menu"] = "cyan (color mode)", ["callback"] = "c", ["accelerator"] = "c"});    -- Cyan
-  app.registerUi({["menu"] = "blue (color mode)", ["callback"] = "b", ["accelerator"] = "b"});    -- Blue
-  app.registerUi({["menu"] = "purple (color mode)", ["callback"] = "p", ["accelerator"] = "p"});  -- Purple
+  app.registerUi({["menu"] = "black (color mode)",  ["callback"] = "x", ["accelerator"] = "x"}); -- blaX
+  app.registerUi({["menu"] = "white (color mode)",  ["callback"] = "w", ["accelerator"] = "w"}); -- White
+  app.registerUi({["menu"] = "pink (color mode)",   ["callback"] = "q", ["accelerator"] = "q"}); -- pinQ
+  app.registerUi({["menu"] = "red (color mode)",    ["callback"] = "r", ["accelerator"] = "r"}); -- Red
+  app.registerUi({["menu"] = "orange (color mode)", ["callback"] = "o", ["accelerator"] = "o"}); -- Orange
+  app.registerUi({["menu"] = "yellow (color mode)", ["callback"] = "y", ["accelerator"] = "y"}); -- Yellow
+  app.registerUi({["menu"] = "green (color mode)",  ["callback"] = "g", ["accelerator"] = "g"}); -- Green
+  app.registerUi({["menu"] = "cyan (color mode)",   ["callback"] = "c", ["accelerator"] = "c"}); -- Cyan
+  app.registerUi({["menu"] = "blue (color mode)",   ["callback"] = "b", ["accelerator"] = "b"}); -- Blue
+  app.registerUi({["menu"] = "purple (color mode)", ["callback"] = "p", ["accelerator"] = "p"}); -- Purple
   -- shape mode
   app.registerUi({["menu"] = "Straight line (shape mode)", ["callback"] = "s", ["accelerator"] = "s"});
-  app.registerUi({["menu"] = "Arrow (shape mode)", ["callback"] = "a", ["accelerator"] = "a"});
-  app.registerUi({["menu"] = "Rectangle (shape mode)", ["callback"] = "r", ["accelerator"] = "r"});
-  app.registerUi({["menu"] = "Ellipse (shape mode)", ["callback"] = "e", ["accelerator"] = "e"});
-  app.registerUi({["menu"] = "Bézier curve (shape mode)", ["callback"] = "b", ["accelerator"] = "b"});
+  app.registerUi({["menu"] = "Arrow (shape mode)",         ["callback"] = "a", ["accelerator"] = "a"});
+  app.registerUi({["menu"] = "Rectangle (shape mode)",     ["callback"] = "r", ["accelerator"] = "r"});
+  app.registerUi({["menu"] = "Ellipse (shape mode)",       ["callback"] = "e", ["accelerator"] = "e"});
+  app.registerUi({["menu"] = "Bézier curve (shape mode)",  ["callback"] = "b", ["accelerator"] = "b"});
 end
 
 -- the modes are "tool" and "color"
