@@ -7,6 +7,8 @@ function handle(key)
     shapeModeHandle(key)
   elseif currentMode == "linestyle" then
     linestyleModeHandle(key)
+  elseif currentMode == "sidebar" then
+    sidebarModeHandle(key)
   end
 end
 
@@ -17,6 +19,9 @@ function toolModeHandle(key)
   elseif key == linestyle then
     currentMode = "linestyle"
     print("Entered linestyle mode")
+  elseif key == sidebar then
+    currentMode = "sidebar"
+    print("Entered sidebar mode")
   elseif key == pen then
     clickPen()
     clickRuler(false)
@@ -67,4 +72,33 @@ function linestyleModeHandle(key)
   elseif key == dashDotted then
     clickDashDotted()
   end
+end
+
+function sidebarModeHandle(key)
+  if key == copy then
+    clickCopy()
+  elseif key == dashed then
+    clickDashed()
+  elseif key == moveUp then
+    clickMoveUp()
+  elseif key == moveDown then
+    clickMoveDown()
+  elseif key == newBefore then
+    clickNewBefore()
+  elseif key == newAfter then
+    clickNewAfter()
+  elseif key == goToBottom then
+    clickGoToBottom()
+  elseif key == goToTop then
+    clickGoToTop()
+  end
+end
+
+
+function cleanShape()
+  clickRuler(false)
+  clickArrow(false)
+  clickRectangle(false)
+  clickEllipse(false)
+  clickSpline(false)
 end

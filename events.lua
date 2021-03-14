@@ -6,10 +6,6 @@ function onToolKey()
   print("Entered tool mode")
 end
 
-function onColorKey()
-  handle(color)
-end
-
 function onShapeKey()
   handle(shape)
 end
@@ -18,46 +14,8 @@ function onLinestyleKey()
   handle(linestyle)
 end
 
-
--- colors
-function onBlackKey()
-  handle(black)
-end
-
-function onWhiteKey()
-  handle(white)
-end
-
-function onPinkKey()
-  handle(pink)
-end
-
-function onRedKey()
-  handle(red)
-end
-
-function onOrangeKey()
-  handle(orange)
-end
-
-function onYellowKey()
-  handle(yellow)
-end
-
-function onGreenKey()
-  handle(green)
-end
-
-function onCyanKey()
-  handle(cyan)
-end
-
-function onBlueKey()
-  handle(blue)
-end
-
-function onPurpleKey()
-  handle(purple)
+function onSidebarKey()
+  handle(sidebar)
 end
 
 
@@ -114,4 +72,37 @@ end
 
 function onDashDottedKey()
   handle(dashDotted)
+end
+
+-- sidebar
+function onCopyKey()
+  handle(copy)
+end
+
+function onDeleteKey()
+  handle(delete)
+end
+
+function onMoveUpKey()
+  handle(moveUp)
+end
+
+function onMoveDownKey()
+  handle(moveDown)
+end
+
+function onNewBeforeKey()
+  handle(newBefore)
+end
+
+function onNewAfterKey()
+  handle(newAfter)
+end
+
+function onGoToBottomKey()
+  handle(goToBottom)
+end
+
+function onGoToTopKey()
+  handle(goToTop)
 end

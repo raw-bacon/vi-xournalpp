@@ -8,9 +8,9 @@ highlighter = "f"
 selection   = "s"
 -- Mode Selection
 tool        = "t"
-color       = "c"
 shape       = "a"
 linestyle   = "q"
+sidebar     = "b"
 -- Thickness
 veryFine    = "1"
 fine        = "2"
@@ -28,4 +28,14 @@ plain       = "a"
 dashed      = "s"
 dotted      = "d"
 dashDotted  = "f"
+-- Sidebar Mode
+copy        = "none"
+delete      = "none"
+moveUp      = "w"
+moveDown    = "s"
+newBefore   = "<Shift>o"
+newAfter    = "o"
+goToBottom  = "<Shift>G"
+goToTop     = "g"
+
 

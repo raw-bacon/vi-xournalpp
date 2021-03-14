@@ -76,3 +76,36 @@ function clickDashDotted()
   app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DASH_DOT"})
 end
 
+
+-- sidebar
+function clickCopy()
+  app.sidebarAction("COPY")
+end
+
+function clickDelete()
+  app.sidebarAction("DELETE")
+end
+
+function clickMoveUp()
+  app.sidebarAction("MOVE_UP")
+end
+
+function clickMoveDown()
+  app.sidebarAction("MOVE_DOWN")
+end
+
+function clickNewBefore()
+  app.sidebarAction("NEW_BEFORE")
+end
+
+function clickNewAfter()
+  app.sidebarAction("NEW_AFTER")
+end
+
+function clickGoToTop()
+  app.scrollToPage(1)
+end
+
+function clickGoToBottom()
+  app.scrollToPage(1000)
+end
