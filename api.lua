@@ -28,14 +28,6 @@ function clickEraser()
   app.uiAction({["action"] = "ACTION_TOOL_ERASER"})
 end
 
-function clickEllipse()
-  app.uiAction({["action"] = "ACTION_TOOL_DRAW_ELLIPSE"})
-end
-
-function clickRectangle()
-  app.uiAction({["action"] = "ACTION_TOOL_DRAW_RECT"})
-end
-
 function clickHighlighter()
   app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER"})
 end
@@ -45,7 +37,7 @@ function clickSelectRegion()
 end
 
 
--- shape
+-- shapes
 function clickRuler(enabled)
   app.uiAction({["action"] = "ACTION_RULER", ["enabled"] = enabled})
 end
@@ -53,6 +45,15 @@ end
 function clickArrow(enabled)
   app.uiAction({["action"] = "ACTION_TOOL_DRAW_ARROW", ["enabled"] = enabled})
 end
+
+function clickEllipse()
+  app.uiAction({["action"] = "ACTION_TOOL_DRAW_ELLIPSE"})
+end
+
+function clickRectangle()
+  app.uiAction({["action"] = "ACTION_TOOL_DRAW_RECT"})
+end
+
 
 function clickPlain()
   app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_PLAIN"})
