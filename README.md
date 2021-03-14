@@ -87,7 +87,7 @@ outside of the `modes.lua` file:
 
 1. An assigned letter in `keybindings.lua`, called `newMode`,
 2. An `onNewModeKey` event in `event.lua`,
-3. An `initUi` entry in `main.lua`,
+3. An `initUi` entry in `main.lua`.
 
 Inside the `modes.lua` file, `newMode` needs
 
