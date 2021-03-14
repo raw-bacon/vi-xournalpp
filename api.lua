@@ -29,7 +29,7 @@ function clickEraser()
 end
 
 function clickHighlighter()
-  app.uiAction({["action"] = "ACTION_TOOL_HIGHLIGHTER"})
+  app.uiAction({["action"] = "ACTION_TOOL_HILIGHTER"})
 end
 
 function clickSelectRegion()
