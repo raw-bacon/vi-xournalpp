@@ -90,6 +90,7 @@ outside of the `modes.lua` file:
 3. An `initUi` entry in `main.lua`,
 
 Inside the `modes.lua` file, `newMode` needs
+
 4. An entry in the `handle` method,
 5. The `newModeHandle` function,
 6. A mention in the `toolModeHandle` function.
