@@ -42,7 +42,7 @@ of as other tools). By default, they are
 1. `t`: `tool` mode (this is always accessible)
 2. `c`: `color` mode
 3. `a`: `shape` mode
-4. `q`: `line` style mode
+4. `q`: `linestyle` mode
 
 The second part is the keybindings for tools.
 By default, those are
