@@ -98,10 +98,12 @@ Inside the `modes.lua` file, `newMode` needs
 ## New Keybindings
 vi-xournalpp currently does not cover the full API. To add another entry,
 follow the following steps.
+
 1. Make a function in `api.lua` wrapping the API call.
 2. Create a new keybinding for it in `keybindings.lua`.
 3. Create an event in `events.lua`
 4. Add a menu entry in `main.lua`
 5. Add it to at least one mode in `modes.lua`.
+
 If the entry is a color, also update `colors.lua` accordingly.
 
