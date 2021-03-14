@@ -17,6 +17,9 @@ fine        = "2"
 medium      = "3"
 thick       = "4"
 veryThick   = "5"
+-- History
+undo        = "d"
+redo        = "r"
 -- Shape Mode
 ruler       = "s"
 arrow       = "a"

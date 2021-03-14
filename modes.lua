@@ -13,6 +13,7 @@ function handle(key)
 end
 
 function toolModeHandle(key)
+  -- modes
   if key == shape then
     currentMode = "shape"
     print("Entered shape mode")
@@ -22,19 +23,17 @@ function toolModeHandle(key)
   elseif key == page then
     currentMode = "page"
     print("Entered page mode")
+  -- tools
   elseif key == pen then
     clickPen()
-    clickRuler(false)
-    clickArrow(false)
-    clickRectangle(false)
-    clickEllipse(false)
-    clickSpline(false)
+    cleanShape()
   elseif key == eraser then
     clickEraser()
   elseif key == highlighter then
     clickHighlighter()
   elseif key == selection then
     clickSelectRegion()
+  -- thickness
   elseif key == veryFine then
     clickVeryFine()
   elseif key == fine then
@@ -45,6 +44,11 @@ function toolModeHandle(key)
     clickThick()
   elseif key == veryThick then
     clickVeryThick()
+  -- history
+  elseif key == undo then
+    clickUndo()
+  elseif key == redo then
+    clickRedo()
   end
 end
 

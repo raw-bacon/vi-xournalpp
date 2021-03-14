@@ -62,10 +62,11 @@ By default, they are
 4. `4`: `thick`
 5. `5`: `veryThick`
 Tool mode is used for switching between the different tools, tool thicknesses,
-and modes. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
+modes, and history operations. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
 Available thicknesses are
 `veryFine`, `fine`, `medium`, `thick`, `veryThick`.
 Available modes are `shape`, `linestyle`, `page`.
+Available history operations are `undo`, `redo`.
 
 
 ## Shape mode

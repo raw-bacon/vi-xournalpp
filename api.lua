@@ -109,3 +109,13 @@ end
 function clickGoToBottom()
   app.scrollToPage(1000)
 end
+
+
+-- history
+function clickUndo()
+  app.uiAction({["action"] = "ACTION_UNDO"})
+end
+
+function clickRedo()
+  app.uiAction({["action"] = "ACTION_REDO"})
+end
