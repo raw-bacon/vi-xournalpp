@@ -67,9 +67,7 @@ eraser      = "e"
 highlighter = "f"
 selection   = "s"
 ```
-
-To disable a keybinding, just set it to
-`"none"` (maybe there is a nicer way?).
+To disable a keybinding, just comment it out.
 
 ## Colors
 The colors can be changed in `colors.lua`.
