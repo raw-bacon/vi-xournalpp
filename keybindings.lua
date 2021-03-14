@@ -42,7 +42,7 @@ dotted      = "d"
 dashDotted  = "f"
 -- Sidebar Mode
 copy        = "none"
-delete      = "none"
+delete      = "none" -- does not work
 moveUp      = "w"
 moveDown    = "s"
 newBefore   = "<Shift>o"
