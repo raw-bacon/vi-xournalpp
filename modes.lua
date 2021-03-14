@@ -29,7 +29,7 @@ function toolModeHandle(key)
   elseif key == highlighter then
     clickHighlighter()
   elseif key == selection then
-    chlickSelection()
+    clickSelection()
   elseif key == veryFine then
     clickVeryFine()
   elseif key == fine then
