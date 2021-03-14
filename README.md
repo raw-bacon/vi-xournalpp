@@ -5,7 +5,7 @@ See the [1.0 branch](https://github.com/raw-bacon/vi-xournalpp/tree/1.0) if runn
 the stable version.
 To set the plugin up on Linux, run
 
-```
+```bash
 cd /usr/share/xournalpp/plugins
 git clone https://github.com/raw-bacon/vi-xournalpp
 ```
@@ -66,7 +66,7 @@ To disable a keybinding, just set it to
 ## Colors
 The colors can be changed in `colors.lua`.
 They require RGB like so:
-```
+```lua
 yellowColor = 0xe9f23a
 ```
 
