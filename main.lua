@@ -46,7 +46,7 @@ end
 
 
 -- the modes are "tool", "color", "linestyle", and "shape"
-local currentMode = "tool"
+currentMode = "tool"
 
 
 -- KEY EVENTS
@@ -185,6 +185,14 @@ function toolModeHandle(key)
     currentMode = "shape"
   elseif key == linestyle then
     currentMode = "linestyle"
+  elseif key == pen then
+    clickPen()
+  elseif key == eraser then
+    clickEraser()
+  elseif key == highlighter then
+    clickHighlighter()
+  elseif key == selection then
+    chlickSelection()
   elseif key == veryFine then
     clickVeryFine()
   elseif key == fine then
