@@ -9,7 +9,7 @@ To set the plugin up on Linux, run
 
 ```bash
 cd /usr/share/xournalpp/plugins
-git clone https://github.com/raw-bacon/vi-xournalpp
+sudo git clone https://github.com/raw-bacon/vi-xournalpp
 ```
 
 vi-xournalpp is inspired by the modal editing popularized
