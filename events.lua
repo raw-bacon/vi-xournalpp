@@ -18,6 +18,10 @@ function onLinestyleKey()
   handle(linestyle)
 end
 
+function onSidebarKey()
+  handle(sidebar)
+end
+
 
 -- colors
 function onBlackKey()
@@ -114,4 +118,37 @@ end
 
 function onDashDottedKey()
   handle(dashDotted)
+end
+
+-- sidebar
+function onCopyKey()
+  handle(copy)
+end
+
+function onDeleteKey()
+  handle(delete)
+end
+
+function onMoveUpKey()
+  handle(moveUp)
+end
+
+function onMoveDownKey()
+  handle(moveDown)
+end
+
+function onNewBeforeKey()
+  handle(newBefore)
+end
+
+function onNewAfterKey()
+  handle(newAfter)
+end
+
+function onGoToBottomKey()
+  handle(goToBottom)
+end
+
+function onGoToTopKey()
+  handle(goToTop)
 end

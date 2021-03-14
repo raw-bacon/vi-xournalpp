@@ -80,3 +80,37 @@ end
 function changeToolColor(color)
   app.changeToolColor({["color"] = color, ["selection"] = true})
 end
+
+
+-- sidebar
+function clickCopy()
+  app.sidebarAction("COPY")
+end
+
+function clickDelete()
+  app.sidebarAction("DELETE")
+end
+
+function clickMoveUp()
+  app.sidebarAction("MOVE_UP")
+end
+
+function clickMoveDown()
+  app.sidebarAction("MOVE_DOWN")
+end
+
+function clickNewBefore()
+  app.sidebarAction("NEW_BEFORE")
+end
+
+function clickNewAfter()
+  app.sidebarAction("NEW_AFTER")
+end
+
+function clickGoToTop()
+  app.scrollToPage(1)
+end
+
+function clickGoToBottom()
+  app.scrollToPage(1000)
+end
