@@ -103,3 +103,39 @@ The default keybindings for line style mode are
 3. `d`: `dotted`
 4. `f`: `dashDotted`
 
+# Configuration
+## Keybindings
+Each keybinding can be assigned a key in `config.lua`.
+To disable a keybinding, say `spline`, just set it to
+`"none"` (maybe there is a nicer way?).
+
+## Colors
+The colors can be changed in `colors.lua`.
+
+## Mode Behavior
+The mode logic is described in the
+file `modes.lua`.
+
+# Extension
+## New Modes
+A mode `newMode` needs the following
+outside of the `modes.lua` file:
+
+1. An assigned letter in `config.lua`, called `newMode`,
+2. An `onNewModeKey` event in `event.lua`,
+3. An `initUi` entry in `main.lua`,
+
+Inside the `modes.lua` file, `newMode` needs
+4. An entry in the `handle` method,
+5. The `newModeHandle` function,
+6. A mention in the `toolModeHandle` function.
+
+## New Keybindings
+vi-xournalpp currently does not cover the full API. To add another entry,
+follow the following steps.
+1. Make a function in `api.lua` wrapping the API call.
+2. Create a new keybinding for it in `config.lua`.
+3. Create an event in `events.lua`
+4. Add a menu entry in `main.lua`
+5. Add it to at least one mode in `modes.lua`.
+
