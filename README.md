@@ -5,7 +5,7 @@ To set the plugin up on Linux, run
 
 ```
 cd /usr/share/xournalpp/plugins
-git clone https://github.com/raw-bacon/vi-xournalpp
+sudo git clone https://github.com/raw-bacon/vi-xournalpp
 git switch 1.0.x
 ```
 
