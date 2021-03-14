@@ -4,17 +4,10 @@ require "events"
 
 function initUi()
   -- modes
-<<<<<<< HEAD
-  app.registerUi({["menu"] = "Enter tool mode",       ["callback"] = "onToolKey",      ["accelerator"] = tool}); 
-  app.registerUi({["menu"] = "Enter shape mode",      ["callback"] = "onShapeKey",     ["accelerator"] = shape});
-  app.registerUi({["menu"] = "Enter line style mode", ["callback"] = "onLinestyleKey", ["accelerator"] = linestyle});
-=======
   app.registerUi({["menu"] = "Enter tool mode",      ["callback"] = "onToolKey",      ["accelerator"] = tool}); 
-  app.registerUi({["menu"] = "Enter color mode",     ["callback"] = "onColorKey",     ["accelerator"] = color});
   app.registerUi({["menu"] = "Enter shape mode",     ["callback"] = "onShapeKey",     ["accelerator"] = shape});
   app.registerUi({["menu"] = "Enter linestyle mode", ["callback"] = "onLinestyleKey", ["accelerator"] = linestyle});
-  app.registerUi({["menu"] = "Enter sidebar mode",   ["callback"] = "onSidebarKey",   ["accelerator"] = sidebar});
->>>>>>> 88010d0 (added sidebar mode)
+  app.registerUi({["menu"] = "Enter page mode",      ["callback"] = "onPageKey",   ["accelerator"] = page});
   -- thickness
   app.registerUi({["menu"] = "Very fine",  ["callback"] = "onVeryFineKey",  ["accelerator"] = veryFine});
   app.registerUi({["menu"] = "Fine",       ["callback"] = "onFineKey",      ["accelerator"] = fine});
@@ -37,15 +30,15 @@ function initUi()
   app.registerUi({["menu"] = "Dashed (linestyle mode)",      ["callback"] = "onDashedKey",     ["accelerator"] = dashed});
   app.registerUi({["menu"] = "Dotted (linestyle mode)",      ["callback"] = "onDottedKey",     ["accelerator"] = dotted});
   app.registerUi({["menu"] = "Dash-dotted (linestyle mode)", ["callback"] = "onDashDottedKey", ["accelerator"] = dashDotted});
-  -- sidebar mode
-  app.registerUi({["menu"] = "Copy (sidebar mode)",         ["callback"] = "onCopyKey",      ["accelerator"] = copy});
-  app.registerUi({["menu"] = "Delete (sidebar mode)",       ["callback"] = "onDeleteKey",    ["accelerator"] = delete});
-  app.registerUi({["menu"] = "Move up (sidebar mode)",      ["callback"] = "onMoveUpKey",    ["accelerator"] = moveUp});
-  app.registerUi({["menu"] = "Move down (sidebar mode)",    ["callback"] = "onMoveDownKey",  ["accelerator"] = moveDown});
-  app.registerUi({["menu"] = "New before (sidebar mode)",   ["callback"] = "onNewBeforeKey", ["accelerator"] = newBefore});
-  app.registerUi({["menu"] = "New after (sidebar mode)",    ["callback"] = "onNewAfterKey",  ["accelerator"] = newAfter});
-  app.registerUi({["menu"] = "Go to bottom (sidebar mode)", ["callback"] = "onGoToBottomKey",  ["accelerator"] = goToBottom});
-  app.registerUi({["menu"] = "Go to top (sidebar mode)",    ["callback"] = "onGoToTopKey",     ["accelerator"] = goToTop});
+  -- page mode
+  app.registerUi({["menu"] = "Copy page (page mode)",    ["callback"] = "onCopyKey",      ["accelerator"] = copyPage});
+  app.registerUi({["menu"] = "Delete page (page mode)",  ["callback"] = "onDeleteKey",    ["accelerator"] = deletePage});
+  app.registerUi({["menu"] = "Move up (page mode)",      ["callback"] = "onMoveUpKey",    ["accelerator"] = moveUp});
+  app.registerUi({["menu"] = "Move down (page mode)",    ["callback"] = "onMoveDownKey",  ["accelerator"] = moveDown});
+  app.registerUi({["menu"] = "New before (page mode)",   ["callback"] = "onNewBeforeKey", ["accelerator"] = newBefore});
+  app.registerUi({["menu"] = "New after (page mode)",    ["callback"] = "onNewAfterKey",  ["accelerator"] = newAfter});
+  app.registerUi({["menu"] = "Go to bottom (page mode)", ["callback"] = "onGoToBottomKey",  ["accelerator"] = goToBottom});
+  app.registerUi({["menu"] = "Go to top (page mode)",    ["callback"] = "onGoToTopKey",     ["accelerator"] = goToTop});
 end
 
 

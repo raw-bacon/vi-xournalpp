@@ -7,8 +7,8 @@ function handle(key)
     shapeModeHandle(key)
   elseif currentMode == "linestyle" then
     linestyleModeHandle(key)
-  elseif currentMode == "sidebar" then
-    sidebarModeHandle(key)
+  elseif currentMode == "page" then
+    pageModeHandle(key)
   end
 end
 
@@ -19,9 +19,9 @@ function toolModeHandle(key)
   elseif key == linestyle then
     currentMode = "linestyle"
     print("Entered linestyle mode")
-  elseif key == sidebar then
-    currentMode = "sidebar"
-    print("Entered sidebar mode")
+  elseif key == page then
+    currentMode = "page"
+    print("Entered page mode")
   elseif key == pen then
     clickPen()
     clickRuler(false)
@@ -74,11 +74,11 @@ function linestyleModeHandle(key)
   end
 end
 
-function sidebarModeHandle(key)
-  if key == copy then
-    clickCopy()
-  elseif key == dashed then
-    clickDashed()
+function pageModeHandle(key)
+  if key == copyPage then
+    clickCopyPage()
+  elseif key == deletePage then
+    clickDeletePage()
   elseif key == moveUp then
     clickMoveUp()
   elseif key == moveDown then

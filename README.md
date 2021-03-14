@@ -23,7 +23,6 @@ In any mode, thickness can be adjusted with numbers:
 
 # Modes
 The default mode is `tool` mode.
-<<<<<<< HEAD
 Tool mode is used for switching between the different tools and modes.
 The other modes are `shape` and `linestyle`.
 The `shape` mode is used to select the different shapes (`ruler`,
@@ -62,12 +61,11 @@ By default, they are
 3. `3`: `medium`
 4. `4`: `thick`
 5. `5`: `veryThick`
-=======
 Tool mode is used for switching between the different tools, tool thicknesses,
 and modes. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
 Available thicknesses are
 `veryFine`, `fine`, `medium`, `thick`, `veryThick`.
-Available modes are `shape`, `linestyle`, `sidebar`.
+Available modes are `shape`, `linestyle`, `page`.
 
 
 ## Shape mode
@@ -83,8 +81,8 @@ The default keybindings for shape mode are
 The `linestyle` mode switches between the different kinds of linestyles,
 namely `plain`, `dashed`, `dotted`, `dashDotted`.
 
-## Sidebar mode
-The `sidebar` mode can manipulate pages and the canvas position.
+## Page mode
+The `page` mode can manipulate pages and the canvas position.
 Available actions are `copy`, `delete`, `moveUp`, `moveDown`,
 `goToTop`, `goToBottom`.
 

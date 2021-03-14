@@ -77,13 +77,13 @@ function clickDashDotted()
 end
 
 
--- sidebar
-function clickCopy()
+-- page
+function clickCopyPage()
   app.sidebarAction("COPY")
 end
 
-function clickDelete()
-  app.sidebarAction("DELETE")
+function clickDeletePage()
+  app.uiAction({["action"] = "ACTION_DELETE_PAGE"})
 end
 
 function clickMoveUp()
