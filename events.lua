@@ -166,3 +166,25 @@ end
 function onRedoKey()
   handle(redo)
 end
+
+
+-- thickness
+function onVeryFineKey()
+  handle(veryFine)
+end
+
+function onFineKey()
+  handle(fine)
+end
+
+function onMediumKey()
+  handle(medium)
+end
+
+function onThickKey()
+  handle(thick)
+end
+
+function onVeryThickKey()
+  handle(veryThick)
+end
