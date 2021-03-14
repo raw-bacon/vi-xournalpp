@@ -12,7 +12,7 @@ tool        = "t"
 color       = "c"
 shape       = "a"
 linestyle   = "q"
-page        = "b" -- b is for bage
+page        = "b"
 -- Thickness
 veryFine    = "1"
 fine        = "2"
