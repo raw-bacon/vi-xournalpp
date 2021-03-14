@@ -10,91 +10,96 @@ git clone https://github.com/raw-bacon/vi-xournalpp
 
 vi-xournalpp is inspired by the modal editing popularized
 by the text editor vi. 
-The two basic philosophies of choosing the keybindings are
+The two basic philosophies of the default keybindings of vi-xournalpp are
 
 - They should be easy to remember mnemonically,
 - They should be accessible by the left hand on a QWERTY/QWERTZ/AZERTY keyboard.
 
-The second philosophy is broken for certain colors (e.g. `o`range),
-but who wants to draw an orange line anyway.
+The second philosophy is broken for certain colors (e.g. `o`range).
 
 # Thickness
 In any mode, thickness can be adjusted with numbers:
 
-1. `1`: Very fine
-2. `2`: Fine
-3. `3`: Medium
-4. `4`: Thick
-5. `5`: Very thick
 
 # Modes
-The modes are
-
-1. `t`: Tool mode
-2. `c`: Color mode
-3. `a`: Shape mode
-4. `q`: Line style mode
-
-Tool mode is used for switching between the different tools and modes,
-color mode is used to switch between the different colors,
-and shape mode is used to select the different shapes (straight line,
-arrow, rectangle, and circle) for the pen tool.
-Line style mode allows for switching between plain, dotted and dashed
-line styles.
+The default mode is `tool` mode.
+Tool mode is used for switching between the different tools and modes.
+The other modes are `color`, `shape`, and `linestyle`.
+The `color` mode is used to switch between the different colors,
+and the `shape` mode is used to select the different shapes (`ruler`,
+`arrow`, `rectangle`, and `ellipse`) for the pen tool.
+The `linestyle` mode allows for switching between `plain`, `dotted` and `dashed`
+linestyles.
 
 ## Tool mode
-The keybindings for tool mode are
+The keybindings of `tool` mode consist of
+three parts.
+The first is the keybindings for modes (which could be thought
+of as other tools). By default, they are
 
-1. `w`: Pen tool (w is for write)
-2. `e`: Eraser tool
-3. `f`: Highlighter tool (f is for fat)
-4. `s`: Selection tool
+1. `t`: `tool` mode (this is always accessible)
+2. `c`: `color` mode
+3. `a`: `shape` mode
+4. `q`: `line` style mode
 
-On version 1.0, the highlighter tool was `HILIGHTER` rather than
+The second part is the keybindings for tools.
+By default, those are
+
+1. `w`: `pen` tool (w is for write)
+2. `e`: `eraser` tool
+3. `f`: `highlighter` tool (f is for fat)
+4. `s`: `selection` tool
+
+On version 1.0, the highlighter tool was called
+`HILIGHTER` in the API rather than
 `HIGHLIGHTER`. This should be a find and replace away from working
 on this version.
 
+The third part is the keybindings for tool thickness.
+By default, they are
+
+1. `1`: `veryFine`
+2. `2`: `fine`
+3. `3`: `medium`
+4. `4`: `thick`
+5. `5`: `veryThick`
+
+
 ## Color mode
-The keybindings for color mode are
+The default keybindings for color mode are
 
-1.  `r`: Red
-2.  `o`: Orange
-3.  `y`: Yellow
-4.  `g`: Green
-5.  `c`: Cyan
-6.  `b`: Blue
-7.  `p`: Purple
-8.  `q`: Pink
-9.  `w`: White
-10. `x`: Black
+1.  `r`: `red`
+2.  `o`: `orange`
+3.  `y`: `yellow`
+4.  `g`: `green`
+5.  `c`: `cyan`
+6.  `b`: `blue`
+7.  `p`: `purple`
+8.  `q`: `pink`
+9.  `w`: `white`
+10. `x`: `black`
 
-Selecting a color in color mode, 
-e.g. entering `cy` for selecting yellow,
-automatically returns you to tool mode.
 If you are running version 1.0,
-color mode will not work, and if you try
+`color` mode will not work, and if you try
 to change color you will get a warning
 message.
+This is because the API of version 1.0
+does not support color change.
 
 ## Shape mode
-The keybindings for shape mode are
+The default keybindings for shape mode are
 
-1. `s`: Straight line
-2. `a`: Arrow
-3. `r`: Rectangle
-4. `e`: Ellipse
-5. `b`: Spline (I think those are also called Bézier curves)
-
-Selecting a shape, e.g. entering `aa` for selecting
-the arrow shape, automatically returns you to tool mode.
+1. `s`: `ruler` (`s` is for straight)
+2. `a`: `arrow`
+3. `r`: `rectangle`
+4. `e`: `ellipse`
+5. `b`: `spline` (`b` is for bezier curve)
 
 ## Line style mode
-The keybindings for line style mode are
+The default keybindings for line style mode are
 
-1. `a`: Plain
-2. `s`: Dashed
-3. `d`: Dotted
-4. `f`: Dash-dotted
+1. `a`: `plain`
+2. `s`: `dashed`
+3. `d`: `dotted`
+4. `f`: `dashDotted`
 
-Selecting a line style
-automatically returns you to tool mode.
