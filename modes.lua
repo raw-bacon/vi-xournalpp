@@ -25,6 +25,11 @@ function toolModeHandle(key)
     print("Entered linestyle mode")
   elseif key == pen then
     clickPen()
+    clickRuler(false)
+    clickArrow(false)
+    clickRectangle(false)
+    clickEllipse(false)
+    clickSpline(false)
   elseif key == eraser then
     clickEraser()
   elseif key == highlighter then

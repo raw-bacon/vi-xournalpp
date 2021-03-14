@@ -46,22 +46,22 @@ function clickArrow(enabled)
   app.uiAction({["action"] = "ACTION_TOOL_DRAW_ARROW", ["enabled"] = enabled})
 end
 
-function clickEllipse()
-  app.uiAction({["action"] = "ACTION_TOOL_DRAW_ELLIPSE"})
+function clickEllipse(enabled)
+  app.uiAction({["action"] = "ACTION_TOOL_DRAW_ELLIPSE", ["enabled"] = enabled})
 end
 
-function clickRectangle()
-  app.uiAction({["action"] = "ACTION_TOOL_DRAW_RECT"})
+function clickRectangle(enabled)
+  app.uiAction({["action"] = "ACTION_TOOL_DRAW_RECT", ["enabled"] = enabled})
 end
 
+function clickSpline(enabled)
+    app.uiAction({["action"] = "ACTION_TOOL_DRAW_SPLINE", ["enabled"] = enabled})
+end
 
 function clickPlain()
   app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_PLAIN"})
 end
 
-function clickSpline()
-    app.uiAction({["action"] = "ACTION_TOOL_DRAW_SPLINE"})
-end
 
 -- linestyle
 function clickDotted()
