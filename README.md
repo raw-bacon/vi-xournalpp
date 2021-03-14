@@ -106,7 +106,7 @@ The default keybindings for line style mode are
 # Configuration
 ## Keybindings
 Each keybinding can be assigned a key in `config.lua`.
-To disable a keybinding, say `spline`, just set it to
+To disable a keybinding, just set it to
 `"none"` (maybe there is a nicer way?).
 
 ## Colors
