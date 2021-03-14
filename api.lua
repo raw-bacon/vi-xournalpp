@@ -76,7 +76,3 @@ function clickDashDotted()
   app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_DASH_DOT"})
 end
 
--- color
-function changeToolColor(color)
-  app.changeToolColor({["color"] = color, ["selection"] = true})
-end

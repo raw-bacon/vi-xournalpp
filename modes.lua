@@ -1,11 +1,8 @@
 require "api"
-require "colors"
 
 function handle(key)
   if currentMode == "tool" then
     toolModeHandle(key)
-  elseif currentMode == "color" then
-    colorModeHandle(key)
   elseif currentMode == "shape" then
     shapeModeHandle(key)
   elseif currentMode == "linestyle" then
@@ -14,10 +11,7 @@ function handle(key)
 end
 
 function toolModeHandle(key)
-  if key == color then
-    currentMode = "color"
-    print("Entered color mode")
-  elseif key == shape then
+  if key == shape then
     currentMode = "shape"
     print("Entered shape mode")
   elseif key == linestyle then
@@ -46,30 +40,6 @@ function toolModeHandle(key)
     clickThick()
   elseif key == veryThick then
     clickVeryThick()
-  end
-end
-
-function colorModeHandle(key)
-  if key == black then
-    changeToolColor(blackColor)
-  elseif key == white then
-    changeToolColor(whiteColor)
-  elseif key == red then
-    changeToolColor(redColor)
-  elseif key == orange then
-    changeToolColor(orangeColor)
-  elseif key == yellow then
-    changeToolColor(yellowColor)
-  elseif key == green then
-    changeToolColor(greenColor)
-  elseif key == cyan then
-    changeToolColor(cyanColor)
-  elseif key == blue then
-    changeToolColor(blueColor)
-  elseif key == pink then
-    changeToolColor(pinkColor)
-  elseif key == purple then
-    changeToolColor(purpleColor)
   end
 end
 

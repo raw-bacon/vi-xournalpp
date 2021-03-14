@@ -15,7 +15,6 @@ The two basic philosophies of the default keybindings of vi-xournalpp are
 - They should be easy to remember mnemonically,
 - They should be accessible by the left hand on a QWERTY/QWERTZ/AZERTY keyboard.
 
-The second philosophy is broken for certain colors (e.g. `o`range).
 
 # Thickness
 In any mode, thickness can be adjusted with numbers:
@@ -24,9 +23,8 @@ In any mode, thickness can be adjusted with numbers:
 # Modes
 The default mode is `tool` mode.
 Tool mode is used for switching between the different tools and modes.
-The other modes are `color`, `shape`, and `linestyle`.
-The `color` mode is used to switch between the different colors,
-and the `shape` mode is used to select the different shapes (`ruler`,
+The other modes are `shape` and `linestyle`.
+The `shape` mode is used to select the different shapes (`ruler`,
 `arrow`, `rectangle`, and `ellipse`) for the pen tool.
 The `linestyle` mode allows for switching between `plain`, `dotted` and `dashed`
 linestyles.
@@ -38,7 +36,6 @@ The first is the keybindings for modes (which could be thought
 of as other tools). By default, they are
 
 1. `t`: `tool` mode (this is always accessible)
-2. `c`: `color` mode
 3. `a`: `shape` mode
 4. `q`: `line` style mode
 
@@ -64,28 +61,6 @@ By default, they are
 4. `4`: `thick`
 5. `5`: `veryThick`
 
-
-## Color mode
-The default keybindings for color mode are
-
-1.  `r`: `red`
-2.  `o`: `orange`
-3.  `y`: `yellow`
-4.  `g`: `green`
-5.  `c`: `cyan`
-6.  `b`: `blue`
-7.  `p`: `purple`
-8.  `q`: `pink`
-9.  `w`: `white`
-10. `x`: `black`
-
-If you are running version 1.0,
-`color` mode will not work, and if you try
-to change color you will get a warning
-message.
-This is because the API of version 1.0
-does not support color change.
-
 ## Shape mode
 The default keybindings for shape mode are
 
@@ -108,9 +83,6 @@ The default keybindings for line style mode are
 Each keybinding can be assigned a key in `keybindings.lua`.
 To disable a keybinding, just set it to
 `"none"` (maybe there is a nicer way?).
-
-## Colors
-The colors can be changed in `colors.lua`.
 
 ## Mode Behavior
 The mode logic is described in the
