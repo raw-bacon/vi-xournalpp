@@ -30,7 +30,7 @@ Tool mode is used for switching between the different tools, tool thicknesses,
 and modes. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
 Available thicknesses are
 `veryFine`, `fine`, `medium`, `thick`, `veryThick`.
-Available modes are `color`, `shape`, `linestyle`, `sidebar`.
+Available modes are `color`, `shape`, `linestyle`, `page`.
 
 ## Color Mode
 The `color` mode is used to switch between the different colors,
@@ -47,8 +47,8 @@ linestyles.
 The `linestyle` mode switches between the different kinds of linestyles,
 namely `plain`, `dashed`, `dotted`, `dashDotted`.
 
-## Sidebar mode
-The `sidebar` mode can manipulate pages and the canvas position.
+## Page mode
+The `page` mode can manipulate pages and the canvas position.
 Available actions are `copy`, `delete`, `moveUp`, `moveDown`,
 `goToTop`, `goToBottom`.
 

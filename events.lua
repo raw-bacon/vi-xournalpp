@@ -18,8 +18,8 @@ function onLinestyleKey()
   handle(linestyle)
 end
 
-function onSidebarKey()
-  handle(sidebar)
+function onPageKey()
+  handle(page)
 end
 
 
@@ -120,13 +120,13 @@ function onDashDottedKey()
   handle(dashDotted)
 end
 
--- sidebar
-function onCopyKey()
-  handle(copy)
+-- page
+function onCopyPageKey()
+  handle(copyPage)
 end
 
-function onDeleteKey()
-  handle(delete)
+function onDeletePageKey()
+  handle(deletePage)
 end
 
 function onMoveUpKey()

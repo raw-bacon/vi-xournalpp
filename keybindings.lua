@@ -11,7 +11,7 @@ tool        = "t"
 color       = "c"
 shape       = "a"
 linestyle   = "q"
-sidebar     = "b"
+page        = "b" -- b is for bage
 -- Thickness
 veryFine    = "1"
 fine        = "2"
@@ -40,9 +40,9 @@ plain       = "a"
 dashed      = "s"
 dotted      = "d"
 dashDotted  = "f"
--- Sidebar Mode
-copy        = "none"
-delete      = "none" -- does not work
+-- Page Mode
+copyPage    = "c"
+deletePage  = "d"
 moveUp      = "w"
 moveDown    = "s"
 newBefore   = "<Shift>o"
