@@ -1,9 +1,52 @@
+----------------------------
+-- KEYBINDINGS:           -- 
+----------------------------
+-- Mode Selection         --
+local tool        = "t"
+local color       = "c"
+local shape       = "a"
+local linestyle   = "q"
+-- Thickness
+-- local veryFine    = "1"
+-- local fine        = "2"
+-- local medium      = "3"
+-- local thick       = "4"
+-- local veryThick   = "5"
+-- -- Tool Mode
+-- local pen         = "w"
+-- local eraser      = "e"
+-- local highlighter = "f"
+-- local selection   = "s"
+-- -- Color Mode
+-- local black       = "x"
+-- local white       = "w"
+-- local pink        = "q"
+-- local red         = "r"
+-- local orange      = "none"
+-- local yellow      = "y"
+-- local green       = "g"
+-- local cyan        = "c"
+-- local blue        = "b"
+-- local purple      = "none"
+-- -- Shape Mode
+-- local ruler       = "s"
+-- local arrow       = "a"
+-- local rectangle   = "r"
+-- local ellipse     = "e"
+-- local bezier      = "b"
+-- -- Linestyle Mode
+-- local plain       = "a"
+-- local dashed      = "s"
+-- local dotted      = "d"
+-- local dashDotted  = "none"
+
+
 function initUi()
   -- modes
-  app.registerUi({["menu"] = "Enter tool mode",       ["callback"] = "t", ["accelerator"] = "t"}); -- Tool
-  app.registerUi({["menu"] = "Enter color mode",      ["callback"] = "c", ["accelerator"] = "c"}); -- Color
-  app.registerUi({["menu"] = "Enter shape mode",      ["callback"] = "a", ["accelerator"] = "a"}); -- shApe
-  app.registerUi({["menu"] = "Enter line style mode", ["callback"] = "q", ["accelerator"] = "q"}); -- q for no reason
+  app.registerUi({["menu"] = "Enter tool mode",       ["callback"] = "onToolKey",      ["accelerator"] = tool}); 
+  app.registerUi({["menu"] = "Enter color mode",      ["callback"] = "onColorKey",     ["accelerator"] = color});
+  app.registerUi({["menu"] = "Enter shape mode",      ["callback"] = "onShapeKey",     ["accelerator"] = shape});
+  app.registerUi({["menu"] = "Enter line style mode", ["callback"] = "onLinestyleKey", ["accelerator"] = linestyle});
   -- thickness
   app.registerUi({["menu"] = "Very fine",  ["callback"] = "one",   ["accelerator"] = "1"});
   app.registerUi({["menu"] = "Fine",       ["callback"] = "two",   ["accelerator"] = "2"});
@@ -184,26 +227,106 @@ function y()
 end
 
 
-function one()
+-- API
+function clickVeryFine()
   app.uiAction({["action"] = "ACTION_SIZE_VERY_FINE"})
 end
 
-function two()
+function clickFine()
   app.uiAction({["action"] = "ACTION_SIZE_FINE"})
 end
 
-function three()
+function clickMedium()
   app.uiAction({["action"] = "ACTION_SIZE_MEDIUM"})
 end
 
-function four()
+function clickThick()
   app.uiAction({["action"] = "ACTION_SIZE_THICK"})
 end
 
-function five()
+function clickVeryThick()
   app.uiAction({["action"] = "ACTION_SIZE_VERY_THICK"})
 end
 
+
+-- Tool mode
+function onToolKey()
+  currentMode = "tool"
+end
+
+
+-- Color mode
+function onColorKey()
+  handle(currentMode, color)
+end
+
+-- Shape mode
+function onShapeKey()
+  handle(currentMode, shape)
+end
+
+-- Linestyle mode
+function onLinestyleKey()
+  forwardModeKey(linestyle, "linestyle")
+end
+
+function forwardModeKey(key, newMode)
+  if canSwitchModes(currentMode) then
+    currentMode = newMode
+    print("Entered " .. " mode")
+    return true
+  else
+    handle(currentMode, key)
+  end
+end
+
+function canSwitchModes(someMode)
+  return someMode == "tool"
+end
+
+function handle(mode, key)
+  if mode == "tool" then
+    toolModeHandle(key)
+  elseif mode == "color" then
+    colorModeHandle(key)
+  elseif mode == "shape" then
+    shapeModeHandle(key)
+  elseif mode == "linestyle" then
+    linestyleModeHandle(key)
+  end
+end
+
+function toolModeHandle(key)
+  if key == color then
+    currentMode = "color"
+  elseif key == shape then
+    currentMode = "shape"
+  elseif key == linestyle then
+    currentMode = "linestyle"
+  elseif key == veryFine then
+    clickVeryFine()
+  elseif key == fine then
+    clickFine()
+  elseif key == medium then
+    clickMedium()
+  elseif key == thick then
+    clickThick()
+  elseif key == veryThick then
+    clickVeryThick()
+  end
+end
+
+function colorModeHandle(key)
+-- TODO
+end
+
+function shapeModeHandle(key)
+-- TODO
+end
+
+function linestyleModeHandle(key)
+-- TODO 
+end
 
 function setColor(color)
   app.changeToolColor({["color"] = color, ["selection"] = true})
