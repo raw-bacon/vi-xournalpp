@@ -152,3 +152,13 @@ end
 function onGoToTopKey()
   handle(goToTop)
 end
+
+
+-- history
+function onUndoKey()
+  handle(undo)
+end
+
+function onRedoKey()
+  handle(redo)
+end

@@ -27,10 +27,11 @@ In any mode, thickness can be adjusted with numbers:
 ## Tool Mode
 The default mode is `tool` mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
-and modes. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
+modes, and history operations. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
 Available thicknesses are
 `veryFine`, `fine`, `medium`, `thick`, `veryThick`.
 Available modes are `color`, `shape`, `linestyle`, `page`.
+Available history operations are `undo`, `redo`.
 
 ## Color Mode
 The `color` mode is used to switch between the different colors,

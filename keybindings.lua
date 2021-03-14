@@ -18,6 +18,9 @@ fine        = "2"
 medium      = "3"
 thick       = "4"
 veryThick   = "5"
+-- History
+undo        = "d"
+redo        = "r"
 -- Color Mode
 black       = "x"
 white       = "w"
