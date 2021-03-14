@@ -25,11 +25,7 @@ function toolModeHandle(key)
     print("Entered linestyle mode")
   elseif key == pen then
     clickPen()
-    clickRuler(false)
-    clickArrow(false)
-    clickRectangle(false)
-    clickEllipse(false)
-    clickSpline(false)
+    cleanShape()
   elseif key == eraser then
     clickEraser()
   elseif key == highlighter then
@@ -97,4 +93,13 @@ function linestyleModeHandle(key)
   elseif key == dashDotted then
     clickDashDotted()
   end
+end
+
+
+function cleanShape()
+  clickRuler(false)
+  clickArrow(false)
+  clickRectangle(false)
+  clickEllipse(false)
+  clickSpline(false)
 end
