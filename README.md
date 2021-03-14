@@ -97,6 +97,9 @@ To disable a keybinding, just set it to
 ## Mode Behavior
 The mode logic is described in the
 file `modes.lua`.
+Changing the behaviour of a particular mode
+just involvies copying and
+pasting around some lines of code in that file.
 
 # Extension
 ## New Modes
