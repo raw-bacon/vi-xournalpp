@@ -39,6 +39,8 @@ function toolModeHandle(key)
     clickHighlighter()
   elseif key == selection then
     clickSelectRegion()
+  elseif key == tex then
+    clickTex()
   -- thickness
   elseif key == veryFine then
     clickVeryFine()

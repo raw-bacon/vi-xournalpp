@@ -36,6 +36,10 @@ function clickSelectRegion()
   app.uiAction({["action"] = "ACTION_TOOL_SELECT_REGION"})
 end
 
+function clickTex()
+  app.uiAction({["action"] = "ACTION_TEX"})
+end
+
 
 -- shapes
 function clickRuler(enabled)

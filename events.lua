@@ -82,6 +82,10 @@ function onSelectionKey()
   handle(selection)
 end
 
+function onTexKey()
+  handle(tex)
+end
+
 -- shapes
 function onRulerKey()
   handle(ruler)

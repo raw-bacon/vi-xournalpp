@@ -20,6 +20,7 @@ function initUi()
   app.registerUi({["menu"] = "Select eraser tool (tool mode)",      ["callback"] = "onEraserKey", ["accelerator"] = eraser});
   app.registerUi({["menu"] = "Select highlighter tool (tool mode)", ["callback"] = "onHighlighterKey", ["accelerator"] = highlighter});
   app.registerUi({["menu"] = "Select select tool (tool mode)",      ["callback"] = "onSelectionKey", ["accelerator"] = selection});
+  app.registerUi({["menu"] = "Select tex tool (tool mode)",         ["callback"] = "onTexKey", ["accelerator"] = tex});
   app.registerUi({["menu"] = "Undo (tool mode)",                    ["callback"] = "onUndoKey", ["accelerator"] = undo});
   app.registerUi({["menu"] = "Redo (tool mode)",                    ["callback"] = "onRedoKey", ["accelerator"] = redo});
   -- color mode
