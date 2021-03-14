@@ -1,43 +1,42 @@
-
-----------------------------
--- KEYBINDINGS:           -- 
-----------------------------
--- Mode Selection         --
-local tool        = "t"
-local color       = "c"
-local shape       = "a"
-local linestyle   = "q"
+--------------------
+-- KEYBINDINGS:   -- 
+--------------------
+-- Tool Mode
+pen         = "w"
+eraser      = "e"
+highlighter = "f"
+selection   = "s"
+-- Mode Selection
+tool        = "t"
+color       = "c"
+shape       = "a"
+linestyle   = "q"
 -- Thickness
-local veryFine    = "1"
-local fine        = "2"
-local medium      = "3"
-local thick       = "4"
-local veryThick   = "5"
--- -- Tool Mode
--- local pen         = "w"
--- local eraser      = "e"
--- local highlighter = "f"
--- local selection   = "s"
--- -- Color Mode
--- local black       = "x"
--- local white       = "w"
--- local pink        = "q"
--- local red         = "r"
--- local orange      = "none"
--- local yellow      = "y"
--- local green       = "g"
--- local cyan        = "c"
--- local blue        = "b"
--- local purple      = "none"
--- -- Shape Mode
--- local ruler       = "s"
--- local arrow       = "a"
--- local rectangle   = "r"
--- local ellipse     = "e"
--- local bezier      = "b"
--- -- Linestyle Mode
--- local plain       = "a"
--- local dashed      = "s"
--- local dotted      = "d"
--- local dashDotted  = "none"
+veryFine    = "1"
+fine        = "2"
+medium      = "3"
+thick       = "4"
+veryThick   = "5"
+-- Color Mode
+black       = "x"
+white       = "w"
+pink        = "q"
+red         = "r"
+orange      = "o"
+yellow      = "y"
+green       = "g"
+cyan        = "c"
+blue        = "b"
+purple      = "p"
+-- Shape Mode
+ruler       = "s"
+arrow       = "a"
+rectangle   = "r"
+ellipse     = "e"
+bezier      = "b"
+-- Linestyle Mode
+plain       = "a"
+dashed      = "s"
+dotted      = "d"
+dashDotted  = "f"
 
