@@ -35,7 +35,7 @@ function initUi()
   app.registerUi({["menu"] = "Arrow (shape mode)",         ["callback"] = "onArrowKey",     ["accelerator"] = arrow});
   app.registerUi({["menu"] = "Rectangle (shape mode)",     ["callback"] = "onRectangleKey", ["accelerator"] = rectangle});
   app.registerUi({["menu"] = "Ellipse (shape mode)",       ["callback"] = "onEllipseKey",   ["accelerator"] = ellipse});
-  app.registerUi({["menu"] = "Bézier curve (shape mode)",  ["callback"] = "onBezierKey",    ["accelerator"] = bezier});
+  app.registerUi({["menu"] = "Spline (shape mode)",        ["callback"] = "onSplineKey",    ["accelerator"] = spline});
   -- line style mode
   app.registerUi({["menu"] = "Plain (line style mode)",       ["callback"] = "onPlainKey",      ["accelerator"] = plain});
   app.registerUi({["menu"] = "Dashed (line style mode)",      ["callback"] = "onDashedKey",     ["accelerator"] = dashed});

@@ -95,8 +95,8 @@ function onEllipseKey()
   handle(ellipse)
 end
 
-function onBezierKey()
-  handle(bezier)
+function onSplineKey()
+  handle(spline)
 end
 
 -- linestyles

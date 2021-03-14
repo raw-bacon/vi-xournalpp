@@ -33,7 +33,7 @@ ruler       = "s"
 arrow       = "a"
 rectangle   = "r"
 ellipse     = "e"
-bezier      = "b"
+spline      = "b"
 -- Linestyle Mode
 plain       = "a"
 dashed      = "s"
