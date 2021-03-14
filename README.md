@@ -24,83 +24,51 @@ In any mode, thickness can be adjusted with numbers:
 
 
 # Modes
+## Tool Mode
 The default mode is `tool` mode.
-Tool mode is used for switching between the different tools and modes.
-The other modes are `color`, `shape`, and `linestyle`.
+Tool mode is used for switching between the different tools, tool thicknesses,
+and modes. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
+Available thicknesses are
+`veryFine`, `fine`, `medium`, `thick`, `veryThick`.
+Available modes are `color`, `shape`, `linestyle`.
+
+## Color Mode
 The `color` mode is used to switch between the different colors,
-and the `shape` mode is used to select the different shapes (`ruler`,
-`arrow`, `rectangle`, and `ellipse`) for the pen tool.
+`black`, `white`, `pink`, `red`, `orange`, `yellow`, `green`,
+`cyan`, `blue`, and `purple`.
+
+## Shape mode
+The `shape` mode is used to select the different shapes, `ruler`,
+`arrow`, `rectangle`, and `ellipse`. This 
 The `linestyle` mode allows for switching between `plain`, `dotted` and `dashed`
 linestyles.
 
-## Tool mode
-The keybindings of `tool` mode consist of
-three parts.
-The first is the keybindings for modes (which could be thought
-of as other tools). By default, they are
-
-1. `t`: `tool` mode (this is always accessible)
-2. `c`: `color` mode
-3. `a`: `shape` mode
-4. `q`: `linestyle` mode
-
-The second part is the keybindings for tools.
-By default, those are
-
-1. `w`: `pen` tool (w is for write)
-2. `e`: `eraser` tool
-3. `f`: `highlighter` tool (f is for fat)
-4. `s`: `selection` tool
-
-The third part is the keybindings for tool thickness.
-By default, they are
-
-1. `1`: `veryFine`
-2. `2`: `fine`
-3. `3`: `medium`
-4. `4`: `thick`
-5. `5`: `veryThick`
-
-
-## Color mode
-The default keybindings for color mode are
-
-1.  `r`: `red`
-2.  `o`: `orange`
-3.  `y`: `yellow`
-4.  `g`: `green`
-5.  `c`: `cyan`
-6.  `b`: `blue`
-7.  `p`: `purple`
-8.  `q`: `pink`
-9.  `w`: `white`
-10. `x`: `black`
-
-## Shape mode
-The default keybindings for shape mode are
-
-1. `s`: `ruler` (`s` is for straight)
-2. `a`: `arrow`
-3. `r`: `rectangle`
-4. `e`: `ellipse`
-5. `b`: `spline` (`b` is for bezier curve)
-
 ## Line style mode
-The default keybindings for line style mode are
+The `linestyle` mode switches between the different kinds of linestyles,
+namely `plain`, `dashed`, `dotted`, `dashDotted`.
 
-1. `a`: `plain`
-2. `s`: `dashed`
-3. `d`: `dotted`
-4. `f`: `dashDotted`
 
 # Configuration
 ## Keybindings
 Each keybinding can be assigned a key in `keybindings.lua`.
+It looks something like this:
+
+```lua
+pen         = "w"
+eraser      = "e"
+highlighter = "f"
+selection   = "s"
+```
+
 To disable a keybinding, just set it to
 `"none"` (maybe there is a nicer way?).
 
 ## Colors
 The colors can be changed in `colors.lua`.
+They require RGB like so:
+```
+yellowColor = 0xe9f23a
+```
 
 ## Mode Behavior
 The mode logic is described in the
@@ -128,4 +96,5 @@ follow the following steps.
 3. Create an event in `events.lua`
 4. Add a menu entry in `main.lua`
 5. Add it to at least one mode in `modes.lua`.
+If the entry is a color, also update `colors.lua` accordingly.
 
