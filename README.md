@@ -42,9 +42,7 @@ The `color` mode is used to switch between the different colors,
 
 ## Shape mode
 The `shape` mode is used to select the different shapes, `ruler`,
-`arrow`, `rectangle`, and `ellipse`. This 
-The `linestyle` mode allows for switching between `plain`, `dotted` and `dashed`
-linestyles.
+`arrow`, `rectangle`, and `ellipse`. 
 
 ## Linestyle mode
 The `linestyle` mode switches between the different kinds of linestyles,
