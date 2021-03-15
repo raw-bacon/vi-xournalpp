@@ -157,6 +157,14 @@ function onGoToFirstPageKey()
   handle(goToFirstPage)
 end
 
+function onGoToBottomKey()
+  handle(goToBottom)
+end
+
+function onGoToTopKey()
+  handle(goToTop)
+end
+
 
 -- history
 function onUndoKey()

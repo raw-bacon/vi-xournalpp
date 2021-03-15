@@ -129,6 +129,10 @@ function pageModeHandle(key)
     clickGoToLastPage()
   elseif key == goToFirstPage then
     clickGoToFirstPage()
+  elseif key == goToBottom then
+    clickGoToBottom()
+  elseif key == goToTop then
+    clickGoToTop()
   end
 end
 

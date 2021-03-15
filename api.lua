@@ -115,6 +115,17 @@ function clickGoToFirstPage()
   app.scrollToPage(1)
 end
 
+function clickGoToTop()
+  app.scrollToPos(0, 0, false)
+end
+
+function clickGoToBottom()
+  local docStructure = app.getDocumentStructure()
+  local currentPage = docStructure["currentPage"]
+  local pageHeight = app.getDocumentStructure()["pages"][currentPage]["pageHeight"]
+  app.scrollToPos(0, pageHeight, false)
+end
+
 function clickGoToLastPage()
   -- it gets clamped in applib_scrollToPage anyway.
   app.scrollToPage(1000000000)

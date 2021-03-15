@@ -54,6 +54,8 @@ function initUi()
   app.registerUi({["menu"] = "New after (page mode)",        ["callback"] = "onNewAfterKey",      ["accelerator"] = newAfter});
   app.registerUi({["menu"] = "Go to last page (page mode)",  ["callback"] = "onGoToLastPageKey",  ["accelerator"] = goToLastPage});
   app.registerUi({["menu"] = "Go to first page (page mode)", ["callback"] = "onGoToFirstPageKey", ["accelerator"] = goToFirstPage});
+  app.registerUi({["menu"] = "Go to top (page mode)",        ["callback"] = "onGoToTopKey",       ["accelerator"] = goToTop});
+  app.registerUi({["menu"] = "Go to bottom (page mode)",     ["callback"] = "onGoToBottomKey",    ["accelerator"] = goToBottom});
 end
 
 

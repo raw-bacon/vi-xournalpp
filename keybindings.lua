@@ -53,4 +53,6 @@ newBefore     = "<Shift>a"
 newAfter      = "a"
 goToLastPage  = "<Shift>G"
 goToFirstPage = "g"
+goToTop       = "b"
+goToBottom    = "<Shift>b"
 
