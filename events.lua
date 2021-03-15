@@ -86,6 +86,10 @@ function onTexKey()
   handle(tex)
 end
 
+function onDeleteKey()
+  handle(delete)
+end
+
 -- shapes
 function onRulerKey()
   handle(ruler)

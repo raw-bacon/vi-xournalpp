@@ -43,6 +43,8 @@ function toolModeHandle(key)
     clickSelectRegion()
   elseif key == tex then
     clickTex()
+  elseif key == delete then
+    clickDelete()
   -- thickness
   elseif key == veryFine then
     clickVeryFine()

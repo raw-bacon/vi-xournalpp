@@ -7,6 +7,7 @@ eraser        = "e"
 highlighter   = "f"
 selection     = "s"
 tex           = "i"
+delete        = "x"
 -- Mode Selection
 tool          = "t"
 color         = "c"

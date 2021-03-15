@@ -40,6 +40,10 @@ function clickTex()
   app.uiAction({["action"] = "ACTION_TEX"})
 end
 
+function clickDelete()
+  app.uiAction({["action"] = "ACTION_DELETE"})
+end
+
 
 -- shapes
 function clickRuler(enabled)

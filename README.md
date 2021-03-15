@@ -29,7 +29,8 @@ accessible from a limited region on the keyboard.
 ## Tool Mode
 The default mode is `tool` mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
-modes, and history operations. Available tools are `pen`, `eraser`, `selection`, `highlighter`, `tex`.
+modes, and history operations. Available tools are `pen`, `eraser`, 
+`selection`, `highlighter`, `tex`, `delete`.
 Available thicknesses are
 `veryFine`, `fine`, `medium`, `thick`, `veryThick`.
 Available modes are `color`, `shape`, `linestyle`, `page`.
