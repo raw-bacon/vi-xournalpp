@@ -57,6 +57,5 @@ function initUi()
 end
 
 
--- the modes are "tool", "color", "linestyle", and "shape"
 currentMode = "tool"
 
