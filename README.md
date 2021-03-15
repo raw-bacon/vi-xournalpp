@@ -51,7 +51,7 @@ namely `plain`, `dashed`, `dotted`, `dashDotted`.
 ## Page mode
 The `page` mode can manipulate pages and the canvas position.
 Available actions are `copy`, `delete`, `moveUp`, `moveDown`,
-`goToTop`, `goToBottom`.
+`goToFirstPage`, `goToLastPage`.
 
 
 # Configuration

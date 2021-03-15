@@ -125,10 +125,10 @@ function pageModeHandle(key)
     clickNewBefore()
   elseif key == newAfter then
     clickNewAfter()
-  elseif key == goToBottom then
-    clickGoToBottom()
-  elseif key == goToTop then
-    clickGoToTop()
+  elseif key == goToLastPage then
+    clickGoToLastPage()
+  elseif key == goToFirstPage then
+    clickGoToFirstPage()
   end
 end
 

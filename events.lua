@@ -149,12 +149,12 @@ function onNewAfterKey()
   handle(newAfter)
 end
 
-function onGoToBottomKey()
-  handle(goToBottom)
+function onGoToLastPageKey()
+  handle(goToLastPage)
 end
 
-function onGoToTopKey()
-  handle(goToTop)
+function onGoToFirstPageKey()
+  handle(goToFirstPage)
 end
 
 

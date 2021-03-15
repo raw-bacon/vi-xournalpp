@@ -111,12 +111,13 @@ function clickNewAfter()
   app.sidebarAction("NEW_AFTER")
 end
 
-function clickGoToTop()
+function clickGoToFirstPage()
   app.scrollToPage(1)
 end
 
-function clickGoToBottom()
-  app.scrollToPage(1000)
+function clickGoToLastPage()
+  -- it gets clamped in applib_scrollToPage anyway.
+  app.scrollToPage(1000000000)
 end
 
 
