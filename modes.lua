@@ -35,8 +35,10 @@ function toolModeHandle(key)
     cleanShape()
   elseif key == eraser then
     clickEraser()
+    cleanShape()
   elseif key == highlighter then
     clickHighlighter()
+    cleanShape()
   elseif key == selection then
     clickSelectRegion()
   elseif key == tex then
