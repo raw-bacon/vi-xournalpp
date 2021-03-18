@@ -22,6 +22,10 @@ function onPageKey()
   handle(page)
 end
 
+function onFileKey()
+  handle(file)
+end
+
 
 -- colors
 function onBlackKey()
@@ -199,4 +203,12 @@ end
 
 function onVeryThickKey()
   handle(veryThick)
+end
+
+function onAnnotatePDFKey()
+  handle(annotatePDF)
+end
+
+function onExportAsPDFKey()
+  handle(exportAsPDF)
 end

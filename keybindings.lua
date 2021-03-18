@@ -8,6 +8,7 @@ highlighter   = "f"
 selection     = "s"
 tex           = "i"
 delete        = "x"
+file          = "y"
 -- Mode Selection
 tool          = "t"
 color         = "c"
@@ -56,4 +57,6 @@ goToLastPage  = "<Shift>G"
 goToFirstPage = "g"
 goToTop       = "b"
 goToBottom    = "<Shift>b"
-
+-- Files
+annotatePDF   = "a"
+exportAsPDF   = "e"

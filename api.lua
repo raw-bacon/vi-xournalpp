@@ -144,3 +144,13 @@ end
 function clickRedo()
   app.uiAction({["action"] = "ACTION_REDO"})
 end
+
+
+-- files
+function clickAnnotatePDF()
+  app.uiAction({["action"] = "ACTION_ANNOTATE_PDF"})
+end
+
+function clickExportAsPDF()
+  app.uiAction({["action"] = "ACTION_EXPORT_AS_PDF"})
+end

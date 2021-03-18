@@ -12,6 +12,8 @@ function handle(key)
     linestyleModeHandle(key)
   elseif currentMode == "page" then
     pageModeHandle(key)
+  elseif currentMode == "file" then
+    fileModeHandle(key)
   end
 end
 
@@ -29,6 +31,9 @@ function toolModeHandle(key)
   elseif key == page then
     currentMode = "page"
     print("Entered page mode")
+  elseif key == file then
+    currentMode = "file"
+    print("Entered file mode")
   -- tools
   elseif key == pen then
     clickPen()
@@ -135,6 +140,14 @@ function pageModeHandle(key)
     clickGoToBottom()
   elseif key == goToTop then
     clickGoToTop()
+  end
+end
+
+function fileModeHandle(key)
+  if key == annotatePDF then
+    clickAnnotatePDF()
+  elseif key == exportAsPDF then
+    clickExportAsPDF()
   end
 end
 

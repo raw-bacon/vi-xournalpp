@@ -8,7 +8,8 @@ function initUi()
   app.registerUi({["menu"] = "Enter color mode",     ["callback"] = "onColorKey",     ["accelerator"] = color});
   app.registerUi({["menu"] = "Enter shape mode",     ["callback"] = "onShapeKey",     ["accelerator"] = shape});
   app.registerUi({["menu"] = "Enter linestyle mode", ["callback"] = "onLinestyleKey", ["accelerator"] = linestyle});
-  app.registerUi({["menu"] = "Enter page mode",      ["callback"] = "onPageKey",   ["accelerator"] = page});
+  app.registerUi({["menu"] = "Enter page mode",      ["callback"] = "onPageKey",      ["accelerator"] = page});
+  app.registerUi({["menu"] = "Enter file mode",      ["callback"] = "onFileKey",      ["accelerator"] = file});
   -- thickness
   app.registerUi({["menu"] = "Very fine",  ["callback"] = "onVeryFineKey",  ["accelerator"] = veryFine});
   app.registerUi({["menu"] = "Fine",       ["callback"] = "onFineKey",      ["accelerator"] = fine});
@@ -57,6 +58,9 @@ function initUi()
   app.registerUi({["menu"] = "Go to first page (page mode)", ["callback"] = "onGoToFirstPageKey", ["accelerator"] = goToFirstPage});
   app.registerUi({["menu"] = "Go to top (page mode)",        ["callback"] = "onGoToTopKey",       ["accelerator"] = goToTop});
   app.registerUi({["menu"] = "Go to bottom (page mode)",     ["callback"] = "onGoToBottomKey",    ["accelerator"] = goToBottom});
+  -- file mode
+  app.registerUi({["menu"] = "Annotate PDF (file mode)",     ["callback"] = "onAnnotatePDFKey",   ["accelerator"] = annotatePDF});
+  app.registerUi({["menu"] = "Export as PDF (file mode)",    ["callback"] = "onExportAsPDFKey",   ["accelerator"] = exportAsPDF});
 end
 
 
