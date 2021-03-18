@@ -30,7 +30,7 @@ accessible from a limited region on the keyboard.
 The default mode is `tool` mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
 modes, and history operations. Available tools are `pen`, `eraser`, 
-`selection`, `highlighter`, `tex`, `delete`.
+`selection`, `highlighter`, `tex`, `delete`, `file`.
 Available thicknesses are
 `veryFine`, `fine`, `medium`, `thick`, `veryThick`.
 Available modes are `color`, `shape`, `linestyle`, `page`.
@@ -53,6 +53,10 @@ namely `plain`, `dashed`, `dotted`, `dashDotted`.
 The `page` mode can manipulate pages and the canvas position.
 Available actions are `copy`, `delete`, `moveUp`, `moveDown`,
 `goToFirstPage`, `goToLastPage`, `goToTop`, `goToBottom`.
+
+## File mode
+The `file` mode can open and write files.
+Available actions are `annotatePDF`, `exportAsPDF`.
 
 
 # Configuration
