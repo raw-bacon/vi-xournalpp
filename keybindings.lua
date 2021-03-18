@@ -1,7 +1,7 @@
 --------------------
 -- KEYBINDINGS:   -- 
 --------------------
--- Tool Mode
+-- Tools
 pen           = "w"
 eraser        = "e"
 highlighter   = "f"
@@ -23,7 +23,7 @@ veryThick     = "5"
 -- History
 undo          = "d"
 redo          = "r"
--- Color Mode
+-- Colors
 black         = "x"
 white         = "w"
 pink          = "q"
@@ -34,18 +34,18 @@ green         = "g"
 cyan          = "c"
 blue          = "b"
 purple        = "p"
--- Shape Mode
+-- Shapes
 ruler         = "s"
 arrow         = "a"
 rectangle     = "r"
 ellipse       = "e"
 spline        = "b"
--- Linestyle Mode
+-- Linestyles
 plain         = "a"
 dashed        = "s"
 dotted        = "d"
 dashDotted    = "f"
--- Page Mode
+-- Page
 copyPage      = "c"
 deletePage    = "d"
 moveUp        = "w"
