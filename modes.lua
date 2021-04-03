@@ -91,6 +91,7 @@ function colorModeHandle(key)
   elseif key == purple then
     changeToolColor(purpleColor)
   end
+  currentMode = "tool"
 end
 
 function shapeModeHandle(key)
@@ -105,6 +106,7 @@ function shapeModeHandle(key)
   elseif key == spline then
     clickSpline()
   end
+  currentMode = "tool"
 end
 
 function linestyleModeHandle(key)
@@ -117,6 +119,7 @@ function linestyleModeHandle(key)
   elseif key == dashDotted then
     clickDashDotted()
   end
+  currentMode = "tool"
 end
 
 function pageModeHandle(key)
@@ -141,6 +144,7 @@ function pageModeHandle(key)
   elseif key == goToTop then
     clickGoToTop()
   end
+  currentMode = "tool"
 end
 
 function fileModeHandle(key)
@@ -149,6 +153,7 @@ function fileModeHandle(key)
   elseif key == exportAsPDF then
     clickExportAsPDF()
   end
+  currentMode = "tool"
 end
 
 
