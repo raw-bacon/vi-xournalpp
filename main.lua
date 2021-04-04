@@ -8,6 +8,9 @@ function initUi()
   app.registerUi({["menu"] = "Enter shape mode",     ["callback"] = "onShapeKey",     ["accelerator"] = shape});
   app.registerUi({["menu"] = "Enter linestyle mode", ["callback"] = "onLinestyleKey", ["accelerator"] = linestyle});
   app.registerUi({["menu"] = "Enter page mode",      ["callback"] = "onPageKey",   ["accelerator"] = page});
+  app.registerUi({["menu"] = "Enter page mode",      ["callback"] = "onPageKey",      ["accelerator"] = page});
+  app.registerUi({["menu"] = "Enter file mode",      ["callback"] = "onFileKey",      ["accelerator"] = file});
+  app.registerUi({["menu"] = "Enter navigation mode",["callback"] = "onNavigationKey",["accelerator"] = navigation});
   -- thickness
   app.registerUi({["menu"] = "Very fine",  ["callback"] = "onVeryFineKey",  ["accelerator"] = veryFine});
   app.registerUi({["menu"] = "Fine",       ["callback"] = "onFineKey",      ["accelerator"] = fine});
@@ -33,14 +36,22 @@ function initUi()
   app.registerUi({["menu"] = "Dotted (linestyle mode)",      ["callback"] = "onDottedKey",     ["accelerator"] = dotted});
   app.registerUi({["menu"] = "Dash-dotted (linestyle mode)", ["callback"] = "onDashDottedKey", ["accelerator"] = dashDotted});
   -- page mode
-  app.registerUi({["menu"] = "Copy page (page mode)",    ["callback"] = "onCopyKey",      ["accelerator"] = copyPage});
-  app.registerUi({["menu"] = "Delete page (page mode)",  ["callback"] = "onDeleteKey",    ["accelerator"] = deletePage});
-  app.registerUi({["menu"] = "Move up (page mode)",      ["callback"] = "onMoveUpKey",    ["accelerator"] = moveUp});
-  app.registerUi({["menu"] = "Move down (page mode)",    ["callback"] = "onMoveDownKey",  ["accelerator"] = moveDown});
-  app.registerUi({["menu"] = "New before (page mode)",   ["callback"] = "onNewBeforeKey", ["accelerator"] = newBefore});
-  app.registerUi({["menu"] = "New after (page mode)",    ["callback"] = "onNewAfterKey",  ["accelerator"] = newAfter});
-  app.registerUi({["menu"] = "Go to bottom (page mode)", ["callback"] = "onGoToBottomKey",  ["accelerator"] = goToBottom});
-  app.registerUi({["menu"] = "Go to top (page mode)",    ["callback"] = "onGoToTopKey",     ["accelerator"] = goToTop});
+  app.registerUi({["menu"] = "Copy page (page mode)",        ["callback"] = "onCopyKey",          ["accelerator"] = copyPage});
+  app.registerUi({["menu"] = "Delete page (page mode)",      ["callback"] = "onDeleteKey",        ["accelerator"] = deletePage});
+  app.registerUi({["menu"] = "Move up (page mode)",          ["callback"] = "onMoveUpKey",        ["accelerator"] = moveUp});
+  app.registerUi({["menu"] = "Move down (page mode)",        ["callback"] = "onMoveDownKey",      ["accelerator"] = moveDown});
+  app.registerUi({["menu"] = "New before (page mode)",       ["callback"] = "onNewBeforeKey",     ["accelerator"] = newBefore});
+  app.registerUi({["menu"] = "New after (page mode)",        ["callback"] = "onNewAfterKey",      ["accelerator"] = newAfter});
+  -- navigation mode
+  app.registerUi({["menu"] = "Go to last page (navigation mode)",  ["callback"] = "onGoToLastPageKey",  ["accelerator"] = goToLastPage});
+  app.registerUi({["menu"] = "Go to first page (navigation mode)", ["callback"] = "onGoToFirstPageKey", ["accelerator"] = goToFirstPage});
+  app.registerUi({["menu"] = "Go to top (navigation mode)",        ["callback"] = "onGoToTopKey",       ["accelerator"] = goToTop});
+  app.registerUi({["menu"] = "Go to bottom (navigation mode)",     ["callback"] = "onGoToBottomKey",    ["accelerator"] = goToBottom});
+  app.registerUi({["menu"] = "Scroll Page Down (navigation mode)", ["callback"] = "onScrollPageDownKey",["accelerator"] = scrollPageDown});
+  app.registerUi({["menu"] = "Scroll Page Up(navigation mode)",    ["callback"] = "onScrollPageUpKey",  ["accelerator"] = scrollPageUp});
+  -- file mode
+  app.registerUi({["menu"] = "Annotate PDF (file mode)",     ["callback"] = "onAnnotatePDFKey",   ["accelerator"] = annotatePDF});
+  app.registerUi({["menu"] = "Export as PDF (file mode)",    ["callback"] = "onExportAsPDFKey",   ["accelerator"] = exportAsPDF});
 end
 
 

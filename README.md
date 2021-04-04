@@ -65,7 +65,9 @@ Tool mode is used for switching between the different tools, tool thicknesses,
 modes, and history operations. Available tools are `pen`, `eraser`, `selection`, `highlighter`.
 Available thicknesses are
 `veryFine`, `fine`, `medium`, `thick`, `veryThick`.
-Available modes are `shape`, `linestyle`, `page`.
+Available modes are `color`, `shape`, `linestyle`, `page`, `navigation`.
+Pressing any key in any mode other than `tool` automatically
+returns the user to tool mode.
 Available history operations are `undo`, `redo`.
 
 
@@ -84,8 +86,20 @@ namely `plain`, `dashed`, `dotted`, `dashDotted`.
 
 ## Page mode
 The `page` mode can manipulate pages and the canvas position.
-Available actions are `copy`, `delete`, `moveUp`, `moveDown`,
-`goToTop`, `goToBottom`.
+Available actions are `copy`, `delete`, `moveUp`, `moveDown`.
+The somewhat ambiguously named `moveUp` and `moveDown`
+actually move the _page_ around in the document
+and are not to be confused with the scrolling commands.
+
+## Navigation mode
+The `navigation` mode is responsible for scrolling.
+Available actions are
+`goToFirstPage`, `goToLastPage`, `goToTop`, `goToBottom`,
+`scrollPageDown`, `scrollPageUp`.
+
+## File mode
+The `file` mode can open and write files.
+Available actions are `annotatePDF`, `exportAsPDF`.
 
 
 # Configuration

@@ -18,6 +18,55 @@ function onPageKey()
   handle(page)
 end
 
+function onFileKey()
+  handle(file)
+end
+
+function onNavigationKey()
+  handle(navigation)
+end
+
+
+-- colors
+function onBlackKey()
+  handle(black)
+end
+
+function onWhiteKey()
+  handle(white)
+end
+
+function onPinkKey()
+  handle(pink)
+end
+
+function onRedKey()
+  handle(red)
+end
+
+function onOrangeKey()
+  handle(orange)
+end
+
+function onYellowKey()
+  handle(yellow)
+end
+
+function onGreenKey()
+  handle(green)
+end
+
+function onCyanKey()
+  handle(cyan)
+end
+
+function onBlueKey()
+  handle(blue)
+end
+
+function onPurpleKey()
+  handle(purple)
+end
 
 -- tools
 function onPenKey()
@@ -99,6 +148,15 @@ function onNewAfterKey()
   handle(newAfter)
 end
 
+-- navigation
+function onGoToLastPageKey()
+  handle(goToLastPage)
+end
+
+function onGoToFirstPageKey()
+  handle(goToFirstPage)
+end
+
 function onGoToBottomKey()
   handle(goToBottom)
 end
@@ -107,6 +165,13 @@ function onGoToTopKey()
   handle(goToTop)
 end
 
+function onScrollPageDownKey()
+  handle(scrollPageDown)
+end
+
+function onScrollPageUpKey()
+  handle(scrollPageUp)
+end
 
 -- history
 function onUndoKey()
