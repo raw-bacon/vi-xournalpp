@@ -14,6 +14,8 @@ function handle(key)
     pageModeHandle(key)
   elseif currentMode == "file" then
     fileModeHandle(key)
+  elseif currentMode == "navigation" then
+    navigationModeHandle(key)
   end
 end
 
@@ -34,6 +36,9 @@ function toolModeHandle(key)
   elseif key == file then
     currentMode = "file"
     print("Entered file mode")
+  elseif key == navigation then
+    currentMode = "navigation"
+    print("Entered navigation mode")
   -- tools
   elseif key == pen then
     clickPen()
@@ -135,7 +140,12 @@ function pageModeHandle(key)
     clickNewBefore()
   elseif key == newAfter then
     clickNewAfter()
-  elseif key == goToLastPage then
+  end
+  currentMode = "tool"
+end
+
+function navigationModeHandle(key)
+  if key == goToLastPage then
     clickGoToLastPage()
   elseif key == goToFirstPage then
     clickGoToFirstPage()
@@ -143,6 +153,10 @@ function pageModeHandle(key)
     clickGoToBottom()
   elseif key == goToTop then
     clickGoToTop()
+  elseif key == scrollPageDown then
+    clickScrollPageDown()
+  elseif key == scrollPageUp then
+    clickScrollPageUp()
   end
   currentMode = "tool"
 end

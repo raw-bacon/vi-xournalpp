@@ -115,12 +115,30 @@ function clickNewAfter()
   app.sidebarAction("NEW_AFTER")
 end
 
+
+-- navigation
 function clickGoToFirstPage()
   app.scrollToPage(1)
 end
 
 function clickGoToTop()
   app.scrollToPos(0, 0, false)
+end
+
+function goToPage(page)
+  app.scrollToPage(page)
+end
+
+function goToPos(x, y)
+  app.scrollToPos(x, y)
+end
+
+function clickScrollPageDown()
+  app.scrollToPage(1, true)
+end
+
+function clickScrollPageUp()
+  app.scrollToPage(-1, true)
 end
 
 function clickGoToBottom()

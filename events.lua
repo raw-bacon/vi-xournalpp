@@ -26,6 +26,10 @@ function onFileKey()
   handle(file)
 end
 
+function onNavigationKey()
+  handle(navigation)
+end
+
 
 -- colors
 function onBlackKey()
@@ -157,6 +161,7 @@ function onNewAfterKey()
   handle(newAfter)
 end
 
+-- navigation
 function onGoToLastPageKey()
   handle(goToLastPage)
 end
@@ -173,6 +178,13 @@ function onGoToTopKey()
   handle(goToTop)
 end
 
+function onScrollPageDownKey()
+  handle(scrollPageDown)
+end
+
+function onScrollPageUpKey()
+  handle(scrollPageUp)
+end
 
 -- history
 function onUndoKey()
