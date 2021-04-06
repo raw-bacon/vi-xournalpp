@@ -37,7 +37,7 @@ keybindings = {
     description = "Selection",
     buttons     = {"s", "v"},
     modes       = {"tool"},
-    call        = clickSelection
+    call        = clickSelectRegion
   },
   tex = {
     description = "Tex",
