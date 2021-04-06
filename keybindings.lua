@@ -261,6 +261,7 @@ keybindings = {
   },
 
   -- Page
+  --[[
   copyPage = {
     description = "copyPage",
     buttons     = {"c"},
@@ -285,6 +286,7 @@ keybindings = {
     modes       = {"page"},
     call        = clickMoveDown
   },
+  --]]
   newBefore = {
     description = "NewBefore",
     buttons     = {"<Shift>a"},
