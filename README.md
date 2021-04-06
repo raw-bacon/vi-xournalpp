@@ -27,45 +27,45 @@ sets of keybindings. This makes it possible for way more commands to be easily
 accessible from a limited region on the keyboard.
 
 ## Tool Mode
-The default mode is *tool* mode.
+The default mode is **tool** mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
 modes, and history operations. Available tools are _pen_, _eraser_, 
 _selection_, _highlighter_, _tex_, _delete_, _file_.
 Available thicknesses are
 _very fine_, _fine_, _medium_, _thick_, _very thick_.
-Available modes are *color*, *shape*, *linestyle*, *page*, *navigation*.
+Available modes are **color**, **shape**, **linestyle**, **page**, **navigation**.
 Pressing any key in any mode other than _tool_ automatically
 returns the user to tool mode.
 Available history operations are _undo_, _redo_.
 
 ## Color Mode
-The *color* mode is used to switch between the different colors,
+The **color** mode is used to switch between the different colors,
 _black_, _white_, _pink_, _red_, _orange_, _yellow_, _green_,
 _cyan_, _blue_, _purple_.
 
 ## Shape mode
-The *shape* mode is used to select the different shapes, _ruler_,
+The **shape** mode is used to select the different shapes, _ruler_,
 _arrow_, _rectangle_, and _ellipse_. 
 
 ## Linestyle mode
-The *linestyle* mode switches between the different kinds of linestyles,
+The **linestyle** mode switches between the different kinds of linestyles,
 namely _plain_, _dashed_, _dotted_, _dashDotted_.
 
 ## Page mode
-The *page* mode can manipulate pages and the canvas position.
+The **page** mode can manipulate pages and the canvas position.
 Available actions are _copy_, _delete_, _moveUp_, _moveDown_.
 The somewhat ambiguously named _moveUp_ and _moveDown_
 actually move the page around in the document
 and are not to be confused with the scrolling commands.
 
 ## Navigation mode
-The *navigation* mode is responsible for scrolling.
+The **navigation** mode is responsible for scrolling.
 Available actions are
 _goToFirstPage_, _goToLastPage_, _goToTop_, _goToBottom_,
 _scrollPageDown_, _scrollPageUp_.
 
 ## File mode
-The *file* mode can open and write files.
+The **file** mode can open and write files.
 Available actions are _annotatePDF_, _exportAsPDF_.
 
 
@@ -107,9 +107,8 @@ yellowColor = 0xe9f23a
 # Extension
 ## New Modes
 A mode `newMode` needs the following
-outside of the `modes.lua` file:
 
-1. An entry in the `ALL_MODES` list in `keybindings.lua`,
+1. An entry `"newMode"` in the `ALL_MODES` list in `keybindings.lua`,
 2. A `newMode` keybinding in the `keybindings` list.
 
 ## New Keybindings
