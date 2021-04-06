@@ -36,6 +36,14 @@ function clickSelectRegion()
   app.uiAction({["action"] = "ACTION_TOOL_SELECT_REGION"})
 end
 
+function clickSelectRectangle()
+  app.uiAction({["action"] = "ACTION_TOOL_SELECT_RECT"})
+end
+
+function clickSelectObject()
+  app.uiAction({["action"] = "ACTION_TOOL_SELECT_OBJECT"})
+end
+
 function clickTex()
   app.uiAction({["action"] = "ACTION_TEX"})
 end

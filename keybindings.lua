@@ -8,7 +8,8 @@ ALL_MODES = {
   "linestyle",
   "page",
   "file",
-  "navigation"
+  "navigation",
+  "visual"
 }
 --------------------
 -- KEYBINDINGS:   -- 
@@ -35,7 +36,7 @@ keybindings = {
   },
   selection = {
     description = "Selection",
-    buttons     = {"s", "v"},
+    buttons     = {"s"},
     modes       = {"tool"},
     call        = clickSelectRegion
   },
@@ -108,6 +109,12 @@ keybindings = {
     buttons     = {"y"},
     modes       = {"tool"},
     call        = function() currentMode = "file" end
+  },
+  visual = {
+    description = "Visual mode",
+    buttons     = {"v"},
+    modes       = {"tool"},
+    call        = function() currentMode = "visual" end
   },
 
   -- Thickness
@@ -353,6 +360,7 @@ keybindings = {
       lastPage = cur
     end
   },
+
   -- Files
   annotatePDF = {
     description = "Annotate PDF",
@@ -366,6 +374,26 @@ keybindings = {
     modes       = {"file"},
     call        = clickExportAsPDF
   },
+
+  -- Visual
+  lasso = {
+    description = "Select Region",
+    buttons     = {"s"},
+    modes       = {"visual"},
+    call        = clickSelectRegion
+  },
+  selectRectangle = {
+    description = "Select Rectangle",
+    buttons     = {"a"},
+    modes       = {"visual"},
+    call        = clickSelectRectangle
+  },
+  selectObject = {
+    description = "Select Object",
+    buttons     = {"e"},
+    modes       = {"visual"},
+    call        = clickSelectObject
+  }
 }
 
 -- helper functions
