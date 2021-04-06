@@ -12,6 +12,7 @@ function handle(key)
       end
       binding.call()
       print(binding.description)
+      break
     end
   end
 end
