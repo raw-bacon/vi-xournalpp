@@ -27,60 +27,75 @@ sets of keybindings. This makes it possible for way more commands to be easily
 accessible from a limited region on the keyboard.
 
 ## Tool Mode
-The default mode is `tool` mode.
+The default mode is *tool* mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
-modes, and history operations. Available tools are `pen`, `eraser`, 
-`selection`, `highlighter`, `tex`, `delete`, `file`.
+modes, and history operations. Available tools are _pen_, _eraser_, 
+_selection_, _highlighter_, _tex_, _delete_, _file_.
 Available thicknesses are
-`veryFine`, `fine`, `medium`, `thick`, `veryThick`.
-Available modes are `color`, `shape`, `linestyle`, `page`, `navigation`.
-Pressing any key in any mode other than `tool` automatically
+_very fine_, _fine_, _medium_, _thick_, _very thick_.
+Available modes are *color*, *shape*, *linestyle*, *page*, *navigation*.
+Pressing any key in any mode other than _tool_ automatically
 returns the user to tool mode.
-Available history operations are `undo`, `redo`.
+Available history operations are _undo_, _redo_.
 
 ## Color Mode
-The `color` mode is used to switch between the different colors,
-`black`, `white`, `pink`, `red`, `orange`, `yellow`, `green`,
-`cyan`, `blue`, `purple`.
+The *color* mode is used to switch between the different colors,
+_black_, _white_, _pink_, _red_, _orange_, _yellow_, _green_,
+_cyan_, _blue_, _purple_.
 
 ## Shape mode
-The `shape` mode is used to select the different shapes, `ruler`,
-`arrow`, `rectangle`, and `ellipse`. 
+The *shape* mode is used to select the different shapes, _ruler_,
+_arrow_, _rectangle_, and _ellipse_. 
 
 ## Linestyle mode
-The `linestyle` mode switches between the different kinds of linestyles,
-namely `plain`, `dashed`, `dotted`, `dashDotted`.
+The *linestyle* mode switches between the different kinds of linestyles,
+namely _plain_, _dashed_, _dotted_, _dashDotted_.
 
 ## Page mode
-The `page` mode can manipulate pages and the canvas position.
-Available actions are `copy`, `delete`, `moveUp`, `moveDown`.
-The somewhat ambiguously named `moveUp` and `moveDown`
-actually move the _page_ around in the document
+The *page* mode can manipulate pages and the canvas position.
+Available actions are _copy_, _delete_, _moveUp_, _moveDown_.
+The somewhat ambiguously named _moveUp_ and _moveDown_
+actually move the page around in the document
 and are not to be confused with the scrolling commands.
 
 ## Navigation mode
-The `navigation` mode is responsible for scrolling.
+The *navigation* mode is responsible for scrolling.
 Available actions are
-`goToFirstPage`, `goToLastPage`, `goToTop`, `goToBottom`,
-`scrollPageDown`, `scrollPageUp`.
+_goToFirstPage_, _goToLastPage_, _goToTop_, _goToBottom_,
+_scrollPageDown_, _scrollPageUp_.
 
 ## File mode
-The `file` mode can open and write files.
-Available actions are `annotatePDF`, `exportAsPDF`.
+The *file* mode can open and write files.
+Available actions are _annotatePDF_, _exportAsPDF_.
 
 
 # Configuration
 ## Keybindings
-Each keybinding can be assigned a key in `keybindings.lua`.
-It looks something like this:
+Keybindings are defined in the file `keybindings.lua`.
+One keybinding looks something like this:
 
-```lua
-pen         = "w"
-eraser      = "e"
-highlighter = "f"
-selection   = "s"
 ```
-To disable a keybinding, just comment it out.
+selection = {
+  description = "Selection",
+  buttons     = {"s", "v"},
+  modes       = {"tool"},
+  call        = clickSelectRegion
+}
+```
+
+The `description` field is the menu
+entry, and also what is logged into the terminal
+if Xournal++ is started using the command `xournalpp`.
+The characters in the `buttons` list are
+the accelerators of the keybinding.
+Modes present in the `modes` list listen
+for the accelerators.
+The function assigned `call` gets executed
+when a valid accelerator is pressed
+in a valid mode. In this case,
+`clickSelectRegion` is a function
+defined in `api.lua`.
+
 
 ## Colors
 The colors can be changed in `colors.lua`.
@@ -89,27 +104,13 @@ They require RGB like so:
 yellowColor = 0xe9f23a
 ```
 
-## Mode Behavior
-The mode logic is described in the
-file `modes.lua`.
-Changing the behaviour of a particular mode
-just involvies copying and
-pasting around some lines of code in that file.
-
 # Extension
 ## New Modes
 A mode `newMode` needs the following
 outside of the `modes.lua` file:
 
-1. An assigned letter in `keybindings.lua`, called `newMode`,
-2. An `onNewModeKey` event in `event.lua`,
-3. An `initUi` entry in `main.lua`.
-
-Inside the `modes.lua` file, `newMode` needs
-
-4. An entry in the `handle` method,
-5. The `newModeHandle` function,
-6. A mention in the `toolModeHandle` function.
+1. An entry in the `ALL_MODES` list in `keybindings.lua`,
+2. A `newMode` keybinding in the `keybindings` list.
 
 ## New Keybindings
 vi-xournalpp currently does not cover the full API. To add another entry,
@@ -117,9 +118,6 @@ follow the following steps.
 
 1. Make a function in `api.lua` wrapping the API call.
 2. Create a new keybinding for it in `keybindings.lua`.
-3. Create an event in `events.lua`
-4. Add a menu entry in `main.lua`
-5. Add it to at least one mode in `modes.lua`.
 
 If the entry is a color, also update `colors.lua` accordingly.
 
