@@ -28,4 +28,5 @@ end
 
 
 currentMode = "tool"
+lastPage = 1
 

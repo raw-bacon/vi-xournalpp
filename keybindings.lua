@@ -261,7 +261,7 @@ keybindings = {
   },
 
   -- Page
-  --[[
+  ---[[
   copyPage = {
     description = "copyPage",
     buttons     = {"c"},
@@ -305,13 +305,19 @@ keybindings = {
     description = "Go to last page",
     buttons     = {"<Shift>G"},
     modes       = {"navigation"},
-    call        = clickGoToLastPage
+    call        = function() 
+      lastPage = currentPage()
+      clickGoToLastPage()
+    end
   },
   goToFirstPage = {
     description = "Go to first page",
     buttons     = {"g"},
     modes       = {"navigation"},
-    call        = clickGoToFirstPage
+    call        = function()
+      lastPage = currentPage()
+      clickGoToFirstPage()
+    end
   },
   goToTop = {
     description = "Go to top",
@@ -336,6 +342,16 @@ keybindings = {
     buttons     = {"w"},
     modes       = {"navigation"},
     call        = clickScrollPageUp
+  },
+  goBack = {
+    description = "Go back to last visited page",
+    buttons     = {"a"},
+    modes       = {"navigation"},
+    call        = function()
+      cur = currentPage()
+      goToPage(lastPage)
+      lastPage = cur
+    end
   },
   -- Files
   annotatePDF = {

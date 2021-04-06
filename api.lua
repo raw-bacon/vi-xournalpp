@@ -153,6 +153,10 @@ function clickGoToLastPage()
   app.scrollToPage(1000000000)
 end
 
+function currentPage()
+  return app.getDocumentStructure()["currentPage"]
+end
+
 
 -- history
 function clickUndo()
