@@ -268,7 +268,6 @@ keybindings = {
   },
 
   -- Page
-  ---[[
   copyPage = {
     description = "copyPage",
     buttons     = {"c"},
@@ -279,7 +278,12 @@ keybindings = {
     description = "DeletePage",
     buttons     = {"d"},
     modes       = {"page"},
-    call        = clickDeletePage
+    call        = function ()
+      result = app.msgbox("Do you really want to delete this page?", {[1] = "Yes", [2] = "No"})
+      if result == 1 then
+        clickDeletePage()
+      end
+    end
   },
   moveUp = {
     description = "MoveUp",
@@ -293,7 +297,6 @@ keybindings = {
     modes       = {"page"},
     call        = clickMoveDown
   },
-  --]]
   newBefore = {
     description = "NewBefore",
     buttons     = {"<Shift>a"},
