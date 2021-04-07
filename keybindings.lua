@@ -94,7 +94,7 @@ keybindings = {
   },
   page = {
     description = "Page mode",
-    buttons     = {"b"},
+    buttons     = {"b", "p"},
     modes       = {"tool"},
     call        = function() currentMode = "page" end
   },
