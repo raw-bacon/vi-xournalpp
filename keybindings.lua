@@ -56,7 +56,7 @@ keybindings = {
   -- History
   undo = {
     description = "Undo",
-    buttons     = {"d"},
+    buttons     = {"d", "u", "z"},
     modes       = {"tool"},
     call        = clickUndo,
   },
@@ -115,6 +115,20 @@ keybindings = {
     buttons     = {"v"},
     modes       = {"tool"},
     call        = function() currentMode = "visual" end
+  },
+
+  -- Various tool mode commands
+  newAfterTool = {
+    description = "NewAfter",
+    buttons     = {"n"},
+    modes       = {"tool"},
+    call        = clickNewAfter
+  },
+  annotatePDFTool = {
+    description = "Annotate PDF",
+    buttons     = {"o"},
+    modes       = {"tool"},
+    call        = clickAnnotatePDF
   },
 
   -- Thickness
@@ -225,7 +239,7 @@ keybindings = {
   },
   rectangle = {
     description = "Rectangle",
-    buttons     = {"r"},
+    buttons     = {"r", "c"},
     modes       = {"shape"},
     call        = clickRectangle
   },
@@ -244,7 +258,7 @@ keybindings = {
   -- Linestyles
   plain = {
     description = "Plain",
-    buttons     = {"a"},
+    buttons     = {"a", "i", "p"},
     modes       = {"linestyle"},
     call        = clickPlain
   },
@@ -305,7 +319,7 @@ keybindings = {
   },
   newAfter = {
     description = "NewAfter",
-    buttons     = {"a"},
+    buttons     = {"a", "n"},
     modes       = {"page"},
     call        = clickNewAfter
   },
@@ -313,7 +327,7 @@ keybindings = {
   -- Navigation
   goToLastPage = {
     description = "Go to last page",
-    buttons     = {"<Shift>G"},
+    buttons     = {"<Shift>G", "e"},
     modes       = {"navigation"},
     call        = function() 
       lastPage = currentPage()
@@ -331,13 +345,13 @@ keybindings = {
   },
   goToTop = {
     description = "Go to top",
-    buttons     = {"b"},
+    buttons     = {"<Shift>b"},
     modes       = {"navigation"},
     call        = clickGoToTop
   },
   goToBottom = {
     description = "Go to bottom",
-    buttons     = {"<Shift>b"},
+    buttons     = {"b"},
     modes       = {"navigation"},
     call        = clickGoToBottom
   },
@@ -387,13 +401,13 @@ keybindings = {
   },
   selectRectangle = {
     description = "Select Rectangle",
-    buttons     = {"a"},
+    buttons     = {"a", "r"},
     modes       = {"visual"},
     call        = clickSelectRectangle
   },
   selectObject = {
     description = "Select Object",
-    buttons     = {"e"},
+    buttons     = {"f", "g"},
     modes       = {"visual"},
     call        = clickSelectObject
   }
