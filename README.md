@@ -14,12 +14,12 @@ sudo git clone https://github.com/raw-bacon/vi-xournalpp
 
 vi-xournalpp is inspired by the modal editing popularized
 by the text editor vi. 
-The two basic philosophies of the default keybindings of vi-xournalpp are
+The two basic principles of the default keybindings of vi-xournalpp are
 
 - They should be easy to remember mnemonically,
 - They should be accessible by the left hand on a QWERTY/QWERTZ/AZERTY keyboard.
 
-The second philosophy is broken for certain colors (e.g. `o`range).
+The second principle is broken for certain colors (e.g. `o`range).
 
 # Usage
 vi-xournalpp is centered around so-called modes. They give access to different
