@@ -196,6 +196,18 @@ keybindings = {
     modes       = {"tool"},
     call        = clickAnnotatePDF
   },
+  zoomIn = {
+    description = "Zoom in",
+    buttons     = {"greater", "<Shift>greater", "plus", "<Shift>plus"},
+    modes       = {"tool"},
+    call        = clickZoomIn
+  },
+  zoomOut = {
+    description = "Zoom out",
+    buttons     = {"minus", "less"},
+    modes       = {"tool"},
+    call        = clickZoomOut
+  },
 
   -- Thickness
   veryFine = {

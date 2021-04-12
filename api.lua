@@ -97,6 +97,15 @@ function changeToolColor(color)
   app.changeToolColor({["color"] = color, ["selection"] = true})
 end
 
+-- zooming
+function clickZoomIn()
+  app.uiAction({["action"] = "ACTION_ZOOM_IN"})
+end
+
+function clickZoomOut()
+  app.uiAction({["action"] = "ACTION_ZOOM_OUT"})
+end
+
 
 -- page
 function clickCopyPage()
