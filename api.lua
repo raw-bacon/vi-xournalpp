@@ -193,3 +193,15 @@ end
 function clickExportAsPDF()
   app.uiAction({["action"] = "ACTION_EXPORT_AS_PDF"})
 end
+
+function clickSave()
+  app.uiAction({["action"] = "ACTION_SAVE"})
+end
+
+function clickSaveAs()
+  app.uiAction({["action"] = "ACTION_SAVE_AS"})
+end
+
+function clickOpen()
+  app.uiAction({["action"] = "ACTION_OPEN"})
+end

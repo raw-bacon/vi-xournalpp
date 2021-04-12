@@ -459,7 +459,7 @@ keybindings = {
   -- Files
   annotatePDF = {
     description = "Annotate PDF",
-    buttons     = {"a"},
+    buttons     = {"a", "o"},
     modes       = {"file"},
     call        = clickAnnotatePDF
   },
@@ -468,6 +468,24 @@ keybindings = {
     buttons     = {"e"},
     modes       = {"file"},
     call        = clickExportAsPDF
+  },
+  save = {
+    description = "Save file",
+    buttons     = {"s", "w"},
+    modes       = {"file"},
+    call        = clickSave
+  },
+  saveAs = {
+    description = "Save file as ...",
+    buttons     = {"<Shift>s", "<Shift>w"},
+    modes       = {"file"},
+    call        = clickSave
+  },
+  open = {
+    description = "Open file",
+    buttons     = {"f"},
+    modes       = {"file"},
+    call        = clickOpen
   },
 
   -- Visual
