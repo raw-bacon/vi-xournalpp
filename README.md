@@ -35,7 +35,9 @@ Available thicknesses are
 _very fine_, _fine_, _medium_, _thick_, _very thick_.
 Available modes are **color**, **shape**, **linestyle**, **page**, **navigation**.
 Pressing any key in any mode other than _tool_ automatically
-returns the user to tool mode.
+returns the user to tool mode, unless the mode was made "sticky"
+by pressing `<Shift>`. E.g., to enter _sticky color mode_, press
+`<Shift>c`.
 Available history operations are _undo_, _redo_.
 
 ## Color Mode

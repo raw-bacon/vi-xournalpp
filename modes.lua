@@ -7,7 +7,7 @@ function handle(key)
   for _, binding in pairs(keybindings) do
     if contains(binding.buttons, key) and contains(binding.modes, currentMode) then
       -- automatically return to tool mode from all other modes
-      if currentMode ~= "tool" then
+      if currentMode ~= "tool" and not sticky then
         currentMode = "tool"
       end
       binding.call()

@@ -29,4 +29,5 @@ end
 
 currentMode = "tool"
 lastPage = 1
+sticky = false
 
