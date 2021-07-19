@@ -63,7 +63,7 @@ function clickArrow(enabled)
 end
 
 function clickEllipse(enabled)
-  app.uiAction({["action"] = "ACTION_TOOL_DRAW_CIRCLE", ["enabled"] = enabled})
+  app.uiAction({["action"] = "ACTION_TOOL_DRAW_ELLIPSE", ["enabled"] = enabled})
 end
 
 function clickRectangle(enabled)
