@@ -220,3 +220,28 @@ end
 function clickOpen()
   app.uiAction({["action"] = "ACTION_OPEN"})
 end
+
+-- background
+function clickRuledBG()
+  app.changeCurrentPageBackground("ruled");
+end
+
+function clickGraphBG()
+  app.changeCurrentPageBackground("graph");
+end
+
+function clickIsometricGraphBG()
+  app.changeCurrentPageBackground("isograph");
+end
+
+function clickDottedGraphBG()
+  app.changeCurrentPageBackground("dotted");
+end
+
+function clickIsometricDottedGraphBG()
+  app.changeCurrentPageBackground("isodotted");
+end
+
+function clickPlainBG()
+  app.changeCurrentPageBackground("plain");
+end

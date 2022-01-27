@@ -418,6 +418,42 @@ keybindings = {
     modes       = {"page"},
     call        = clickNewLayer
   },
+  ruledBG = {
+    description = "Ruled background",
+    buttons     = {"f"},
+    modes       = {"page"},
+    call        = clickRuledBG
+  },
+  graphBG = {
+    description = "Graph background",
+    buttons     = {"g"},
+    modes       = {"page"},
+    call        = clickGraphBG
+  },
+  isoGraphBG = {
+    description = "Isometric graph background",
+    buttons     = {"h"},
+    modes       = {"page"},
+    call        = clickIsometricGraphBG
+  },
+  dottedGraphBG = {
+    description = "Dotted background",
+    buttons     = {"v"},
+    modes       = {"page"},
+    call        = clickDottedGraphBG
+  },
+  isodottedGraphBG = {
+    description = "Isometric dotted background",
+    buttons     = {"b"},
+    modes       = {"page"},
+    call        = clickIsometricDottedGraphBG
+  },
+  plainBG = {
+    description = "Plain background",
+    buttons     = {"n"},
+    modes       = {"page"},
+    call        = clickPlainBG
+  },
 
   -- Navigation
   goToLastPage = {
