@@ -463,7 +463,7 @@ keybindings = {
   },
   layerDown = {
     description = "Scroll page up",
-    buttons     = {"y"},
+    buttons     = {"x"},
     modes       = {"navigation"},
     call        = clickLayerDown
   },
