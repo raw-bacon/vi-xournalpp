@@ -432,7 +432,7 @@ keybindings = {
   },
   isoGraphBG = {
     description = "Isometric graph background",
-    buttons     = {"h"},
+    buttons     = {"r"},
     modes       = {"page"},
     call        = clickIsometricGraphBG
   },
