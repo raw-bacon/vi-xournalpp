@@ -455,6 +455,18 @@ keybindings = {
       lastPage = cur
     end
   },
+  layerUp = {
+    description = "Scroll page up",
+    buttons     = {"y"},
+    modes       = {"navigation"},
+    call        = clickLayerUp
+  },
+  layerDown = {
+    description = "Scroll page up",
+    buttons     = {"y"},
+    modes       = {"navigation"},
+    call        = clickLayerDown
+  },
 
   -- Files
   annotatePDF = {

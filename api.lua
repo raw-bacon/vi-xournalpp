@@ -174,6 +174,14 @@ function currentPage()
   return app.getDocumentStructure()["currentPage"]
 end
 
+function clickLayerDown()
+  app.uiAction({["action"] = "ACTION_GOTO_PREVIOUS_LAYER"})
+end
+
+function clickLayerUp()
+  app.uiAction({["action"] = "ACTION_GOTO_NEXT_LAYER"})
+end
+
 
 -- history
 function clickUndo()
