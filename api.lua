@@ -132,6 +132,13 @@ function clickNewAfter()
   app.sidebarAction("NEW_AFTER")
 end
 
+function clickNewLayer()
+  app.uiAction({["action"] = "ACTION_NEW_LAYER"})
+end
+
+function clickDeleteLayer()
+  app.uiAction({["action"] = "ACTION_DELETE_LAYER"})
+end
 
 -- navigation
 function clickGoToFirstPage()

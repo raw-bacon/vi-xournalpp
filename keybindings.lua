@@ -401,6 +401,23 @@ keybindings = {
     modes       = {"page"},
     call        = clickNewAfter
   },
+  deleteLayer = {
+    description = "DeleteLayer",
+    buttons     = {"x"},
+    modes       = {"page"},
+    call        = function ()
+      result = app.msgbox("Do you really want to delete this layer?", {[1] = "Yes", [2] = "No"})
+      if result == 1 then
+        clickDeleteLayer()
+      end
+    end
+  },
+  newLayer = {
+    description = "NewLayer",
+    buttons     = {"y"},
+    modes       = {"page"},
+    call        = clickNewLayer
+  },
 
   -- Navigation
   goToLastPage = {
