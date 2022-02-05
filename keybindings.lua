@@ -397,7 +397,7 @@ keybindings = {
   },
   newAfter = {
     description = "NewAfter",
-    buttons     = {"a", "n"},
+    buttons     = {"a"},
     modes       = {"page"},
     call        = clickNewAfter
   },
