@@ -378,31 +378,31 @@ keybindings = {
     end
   },
   moveUp = {
-    description = "MoveUp",
+    description = "Move Up",
     buttons     = {"w"},
     modes       = {"page"},
     call        = clickMoveUp
   },
   moveDown = {
-    description = "MoveDown",
+    description = "Move Down",
     buttons     = {"s"},
     modes       = {"page"},
     call        = clickMoveDown
   },
   newBefore = {
-    description = "NewBefore",
+    description = "New Before",
     buttons     = {"<Shift>a"},
     modes       = {"page"},
     call        = clickNewBefore
   },
   newAfter = {
-    description = "NewAfter",
+    description = "New After",
     buttons     = {"a"},
     modes       = {"page"},
     call        = clickNewAfter
   },
   deleteLayer = {
-    description = "DeleteLayer",
+    description = "Delete Layer",
     buttons     = {"x"},
     modes       = {"page"},
     call        = function ()
@@ -509,13 +509,13 @@ keybindings = {
     end
   },
   layerUp = {
-    description = "Scroll page up",
+    description = "Layer up",
     buttons     = {"y"},
     modes       = {"navigation"},
     call        = clickLayerUp
   },
   layerDown = {
-    description = "Scroll page up",
+    description = "Layer Down",
     buttons     = {"x"},
     modes       = {"navigation"},
     call        = clickLayerDown
