@@ -10,6 +10,9 @@ cd /usr/share/xournalpp/plugins
 sudo git clone https://github.com/raw-bacon/vi-xournalpp
 ```
 
+In Xournal++, activate the plugin using the _Plugin Manager_
+in the menu bar under _Plugin_.
+
 vi-xournalpp is inspired by the modal editing popularized
 by the text editor vi. 
 The two basic principles of the default keybindings of vi-xournalpp are
