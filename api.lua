@@ -78,8 +78,8 @@ function clickPlain()
   app.uiAction({["action"] = "ACTION_TOOL_LINE_STYLE_PLAIN"})
 end
 
-function clickFill()
-  app.uiAction({["action"] = "ACTION_TOOL_FILL", ["selection"] = true})
+function clickFill(enabled)
+  app.uiAction({["action"] = "ACTION_TOOL_FILL", ["selection"] = true, ["enabled"] = enabled})
 end
 
 

@@ -587,5 +587,6 @@ function cleanShape()
   clickRectangle(false)
   clickEllipse(false)
   clickSpline(false)
+  clickFill(false)
   clickPlain()
 end
