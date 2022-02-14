@@ -333,6 +333,12 @@ keybindings = {
     modes       = {"shape"},
     call        = clickSpline
   },
+  fill = {
+    description = "Fill",
+    buttons     = {"f"},
+    modes       = {"shape"},
+    call        = clickFill
+  },
   -- Linestyles
   plain = {
     description = "Plain",
