@@ -1,11 +1,11 @@
 -- change the hex values to customize colors
 blackColor  = 0x000000
-whiteColor  = 0xffffff
-pinkColor   = 0xf88fea 
-redColor    = 0xed6060
-orangeColor = 0xec9435
-yellowColor = 0xe9f23a
-greenColor  = 0x6ae170
-cyanColor   = 0x44e8e1
-blueColor   = 0x7c80ec
-purpleColor = 0xb57ed9
+whiteColor  = 0xf8f8f2
+pinkColor   = 0xff79c6
+redColor    = 0xff5555
+orangeColor = 0xffb86c
+yellowColor = 0xf1fa8c
+greenColor  = 0x50fa7b
+cyanColor   = 0x8be9fd
+blueColor   = 0x6272a4
+purpleColor = 0xbd93f9
