@@ -297,7 +297,7 @@ keybindings = {
   },
   purple = {
     description = "Purple",
-    buttons     = {"p"},
+    buttons     = {"p", "a"},
     modes       = {"color"},
     call        = function() changeToolColor(purpleColor) end
   },
