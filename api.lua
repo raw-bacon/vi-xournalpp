@@ -98,6 +98,9 @@ end
 
 -- color
 function changeToolColor(color)
+  app.changeToolColor({["color"] = color, ["tool"] = "TEXT"})
+
+  -- change text tool color too, because (with the default template) the TEX tool also uses that color
   app.changeToolColor({["color"] = color, ["selection"] = true})
 end
 
