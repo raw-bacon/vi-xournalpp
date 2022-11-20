@@ -98,10 +98,10 @@ end
 
 -- color
 function changeToolColor(color)
-  app.changeToolColor({["color"] = color, ["tool"] = "TEXT"})
+  local result = app.changeToolColor({["color"] = color, ["selection"] = true})
 
   -- change text tool color too, because (with the default template) the TEX tool also uses that color
-  app.changeToolColor({["color"] = color, ["selection"] = true})
+  app.changeToolColor({["color"] = color, ["tool"] = "TEXT"})
 end
 
 -- zooming
