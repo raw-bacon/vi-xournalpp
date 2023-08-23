@@ -1,6 +1,6 @@
 # vi-xournalpp
 This is a tiny plugin for [Xournal++](https://github.com/xournalpp/xournalpp),
-version 1.1.x.
+version 1.1.x. After rudimentary testing, it seems compatible with version 1.2.x.
 
 # Installation
 To set the plugin up on Linux, run
