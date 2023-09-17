@@ -9,10 +9,11 @@ ALL_MODES = {
   "page",
   "file",
   "navigation",
-  "visual"
+  "visual",
+  "resize"
 }
 --------------------
--- KEYBINDINGS:   -- 
+-- KEYBINDINGS:   --
 --------------------
 keybindings = {
   -- Tools
@@ -72,8 +73,8 @@ keybindings = {
     description = "Tool mode",
     buttons     = {"t"},
     modes       = ALL_MODES,
-    call        = function() 
-      currentMode = "tool" 
+    call        = function()
+      currentMode = "tool"
       sticky = false
     end
   },
@@ -87,8 +88,8 @@ keybindings = {
     description = "Sticky color mode",
     buttons     = {"<Shift>c"},
     modes       = {"tool"},
-    call        = function() 
-      currentMode = "color" 
+    call        = function()
+      currentMode = "color"
       sticky = true
     end
   },
@@ -103,7 +104,7 @@ keybindings = {
     buttons     = {"<Shift>a"},
     modes       = {"tool"},
     call        = function()
-      currentMode = "shape" 
+      currentMode = "shape"
       sticky = true
     end
   },
@@ -118,7 +119,7 @@ keybindings = {
     buttons     = {"<Shift>q"},
     modes       = {"tool"},
     call        = function()
-      currentMode = "linestyle" 
+      currentMode = "linestyle"
       sticky = true
     end
   },
@@ -133,7 +134,7 @@ keybindings = {
     buttons     = {"<Shift>b", "<Shift>p"},
     modes       = {"tool"},
     call        = function()
-      currentMode = "page" 
+      currentMode = "page"
       sticky = true
     end
   },
@@ -148,7 +149,7 @@ keybindings = {
     buttons     = {"<Shift>g"},
     modes       = {"tool"},
     call        = function()
-      currentMode = "navigation" 
+      currentMode = "navigation"
       sticky = true
     end
   },
@@ -163,7 +164,7 @@ keybindings = {
     buttons     = {"<Shift>y"},
     modes       = {"tool"},
     call        = function()
-      currentMode = "file" 
+      currentMode = "file"
       sticky = true
     end
   },
@@ -178,9 +179,15 @@ keybindings = {
     buttons     = {"<Shift>v"},
     modes       = {"tool"},
     call        = function()
-      currentMode = "visual" 
+      currentMode = "visual"
       sticky = true
     end
+  },
+  resize = {
+    description = "Resize mode",
+    buttons     = {"<Shift>F"},
+    modes       = {"tool"},
+    call        = function() currentMode = "resize" end
   },
 
   -- Various tool mode commands
@@ -212,32 +219,32 @@ keybindings = {
   -- Thickness
   veryFine = {
     description = "Very Fine",
-    buttons     = {"1"},
-    modes       = {"tool"},
+    buttons     = {"a"},
+    modes       = {"resize"},
     call        = clickVeryFine,
   },
   fine = {
     description = "Fine",
-    buttons     = {"2"},
-    modes       = {"tool"},
+    buttons     = {"s"},
+    modes       = {"resize"},
     call        = clickFine,
   },
   medium = {
     description = "Medium",
-    buttons     = {"3"},
-    modes       = {"tool"},
+    buttons     = {"d"},
+    modes       = {"resize"},
     call        = clickMedium,
   },
   thick = {
     description = "Thick",
-    buttons     = {"4"},
-    modes       = {"tool"},
+    buttons     = {"f"},
+    modes       = {"resize"},
     call        = clickThick,
   },
   veryThick = {
     description = "Very thick",
-    buttons     = {"5"},
-    modes       = {"tool"},
+    buttons     = {"g"},
+    modes       = {"resize"},
     call        = clickVeryThick,
   },
   -- Colors
@@ -466,7 +473,7 @@ keybindings = {
     description = "Go to last page",
     buttons     = {"<Shift>g", "e"},
     modes       = {"navigation"},
-    call        = function() 
+    call        = function()
       lastPage = currentPage()
       clickGoToLastPage()
     end

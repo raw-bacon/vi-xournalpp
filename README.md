@@ -14,7 +14,7 @@ In Xournal++, activate the plugin using the _Plugin Manager_
 in the menu bar under _Plugin_.
 
 vi-xournalpp is inspired by the modal editing popularized
-by the text editor vi. 
+by the text editor vi.
 The two basic principles of the default keybindings of vi-xournalpp are
 
 - They should be easy to remember mnemonically,
@@ -30,10 +30,8 @@ accessible from a limited region on the keyboard.
 ## Tool Mode
 The default mode is **tool** mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
-modes, and history operations. Available tools are _pen_, _eraser_, 
+modes, and history operations. Available tools are _pen_, _eraser_,
 _selection_, _highlighter_, _tex_, _delete_, _file_.
-Available thicknesses are
-_very fine_, _fine_, _medium_, _thick_, _very thick_.
 Available modes are **color**, **shape**, **linestyle**, **page**, **navigation**.
 Pressing any key in any mode other than _tool_ automatically
 returns the user to tool mode, unless the mode was made "sticky"
@@ -48,7 +46,7 @@ _cyan_, _blue_, _purple_.
 
 ## Shape mode
 The **shape** mode is used to select the different shapes, _ruler_,
-_arrow_, _rectangle_, and _ellipse_. 
+_arrow_, _rectangle_, and _ellipse_.
 
 ## Linestyle mode
 The **linestyle** mode switches between the different kinds of linestyles,
@@ -71,6 +69,11 @@ _scrollPageDown_, _scrollPageUp_.
 The **file** mode can open and write files.
 Available actions are _annotatePDF_, _exportAsPDF_.
 
+## Resize mode
+The **resize** mode can be used to change thicknesses.
+Available thicknesses are
+_very fine_, _fine_, _medium_, _thick_, _very thick_,
+accessed by `a`, `s`, `d`, `f`, `g`, respectively.
 
 # Configuration
 ## Keybindings
@@ -122,4 +125,3 @@ follow the following steps.
 2. Create a new keybinding for it in `keybindings.lua`.
 
 If the entry is a color, also update `colors.lua` accordingly.
-
