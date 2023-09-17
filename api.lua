@@ -48,6 +48,10 @@ function clickTex()
   app.uiAction({["action"] = "ACTION_TEX"})
 end
 
+function clickText()
+  app.uiAction({["action"] = "ACTION_TOOL_TEXT"})
+end
+
 function clickDelete()
   app.uiAction({["action"] = "ACTION_DELETE"})
 end

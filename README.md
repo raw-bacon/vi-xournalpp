@@ -31,7 +31,7 @@ accessible from a limited region on the keyboard.
 The default mode is **tool** mode.
 Tool mode is used for switching between the different tools, tool thicknesses,
 modes, and history operations. Available tools are _pen_, _eraser_,
-_selection_, _highlighter_, _tex_, _delete_, _file_.
+_selection_, _highlighter_, _tex_, _text_, _delete_, _file_.
 Available modes are **color**, **shape**, **linestyle**, **page**, **navigation**.
 Pressing any key in any mode other than _tool_ automatically
 returns the user to tool mode, unless the mode was made "sticky"

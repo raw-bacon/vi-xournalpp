@@ -47,6 +47,12 @@ keybindings = {
     modes       = {"tool"},
     call        = clickTex
   },
+  text = {
+    description = "Text",
+    buttons     = {"<Shift>t", "<Shift>i"},
+    modes       = {"tool"},
+    call        = clickText
+  },
   delete = {
     description = "Delete",
     buttons     = {"x"},
