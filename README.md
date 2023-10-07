@@ -6,8 +6,8 @@ version 1.1.x and 1.2.x.
 To set the plugin up on Linux, run
 
 ```bash
-cd /usr/share/xournalpp/plugins
-sudo git clone https://github.com/raw-bacon/vi-xournalpp
+cd ~/.config/xournalpp/plugins
+git clone https://github.com/raw-bacon/vi-xournalpp
 ```
 
 In Xournal++, activate the plugin using the _Plugin Manager_
