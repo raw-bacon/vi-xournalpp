@@ -52,6 +52,10 @@ function clickText()
   app.uiAction({["action"] = "ACTION_TOOL_TEXT"})
 end
 
+function clickHand()
+  app.uiAction({["action"] = "ACTION_TOOL_HAND"})
+end
+
 function clickDelete()
   app.uiAction({["action"] = "ACTION_DELETE"})
 end

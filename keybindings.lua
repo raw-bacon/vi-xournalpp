@@ -35,6 +35,12 @@ keybindings = {
     modes       = {"tool"},
     call        = function() clickHighlighter() ; cleanShape() end
   },
+  hand = {
+    description = "Hand",
+    buttons     = {"<Shift>f"},
+    modes       = {"tool"},
+    call        = clickHand
+  },
   selection = {
     description = "Selection",
     buttons     = {"s"},
