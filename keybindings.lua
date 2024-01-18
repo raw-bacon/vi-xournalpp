@@ -37,7 +37,7 @@ keybindings = {
   },
   hand = {
     description = "Hand",
-    buttons     = {"<Shift>f"},
+    buttons     = {"<Shift>d"},
     modes       = {"tool"},
     call        = clickHand
   },
