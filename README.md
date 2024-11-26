@@ -26,6 +26,11 @@ The second principle is broken for certain colors (e.g. `o`range).
 vi-xournalpp is centered around so-called modes. They give access to different
 sets of keybindings. This makes it possible for way more commands to be easily
 accessible from a limited region on the keyboard.
+Keybindings sorted by modes can be found in [keybinginds.md](keybindings.md).
+
+You can modify keybindings by editing [keybindings.lua](keybindings.lua) in your plugin
+folder. If you want, you can then regenerate the markdown file by running
+[documentation.lua](documentation.lua) using your local lua interpreter.
 
 ## Tool Mode
 The default mode is **tool** mode.
